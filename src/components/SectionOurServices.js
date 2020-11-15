@@ -11,6 +11,7 @@ const data = useStaticQuery(graphql`
       node {
         id
         Title
+        slug
         }
       }
     }
@@ -25,7 +26,7 @@ const data = useStaticQuery(graphql`
         {
           data.allStrapiServices.edges.map(elem =>{
             const title = elem.node.Title || null;
-            const link = elem.node.id
+            const link = elem.node.slug
             return(
               <a
                 key={elem.node.id}
