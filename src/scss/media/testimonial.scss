@@ -1,0 +1,73 @@
+@import '../utils/mixins.scss';
+@import '../utils/vars.scss';
+@import '../utils/fonts.scss';
+
+
+
+
+
+@include mediaWidth_1025 {
+
+  .section-testimonial {
+    padding-top: rem(48);
+
+    .row {
+      .heading-pages {
+        h2 {
+          font-size: 56px;
+        }
+
+        h3 {
+          font-size: 20px;
+        }
+      }
+
+      .portrait-dr {
+        height: 450px;
+      }
+    }
+
+
+  }
+
+}
+
+@include mediaWidth_700 {
+  .section-testimonial {
+    padding-top: rem(120);
+
+    .row {
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+
+      h2 {
+        width: 100% !important;
+      }
+
+      .portrait-dr {
+
+        height: auto;
+
+        img {
+          max-width: 100%;
+          height: auto;
+          transform: none;
+        }
+      }
+
+    }
+  }
+}
+
+@include mediaWidth_424 {
+  .heading-pages {
+    h3 {
+      font-size: 17px !important;
+    }
+
+    h2 {
+      font-size: 40px !important;
+    }
+  }
+}

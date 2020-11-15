@@ -1,0 +1,26 @@
+@import '../utils/mixins.scss';
+@import '../utils/vars.scss';
+@import '../utils/fonts.scss';
+
+
+
+@include mediaWidth_1025 {
+  .section-padding {
+    flex-wrap: wrap;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .text-container {
+      padding: 0;
+      margin-bottom: 30px;
+    }
+
+    .container-img {
+      text-align: center;
+    }
+  }
+
+
+
+
+}

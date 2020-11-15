@@ -1,0 +1,60 @@
+import React from "react"
+import {graphql, useStaticQuery} from "gatsby"
+import ReactMarkdown from "react-markdown"
+import Layout from "../components/layout"
+import MakeAnAppointment from "../components/MakeAnAppointment"
+import "../scss/main.scss"
+
+
+const TeamDr = ({ data }) => {
+  const specialization = data.strapiTeams.Specialization || null;
+  const name = data.strapiTeams.Name || null;
+  const photo = data.strapiTeams.Photo.childImageSharp.fixed.src || null;
+  const content = data.strapiTeams.Content || null;
+  return(
+    <Layout>
+      <section className="section-testimonial">
+        <div className="container row">
+          <div className="heading-pages">
+            <h3>{specialization}</h3>
+            <h2 className={`name_dr`}>{name}</h2>
+            <MakeAnAppointment
+            classItem={`appointment`}
+            />
+          </div>
+          <div className="portrait-dr">
+            <img src={photo} alt="" />
+            {/*<Img*/}
+            {/*  fixed={image}*/}
+            {/*/>*/}
+          </div>
+        </div>
+      </section>
+      <section className={`section-description`}>
+        <div>
+          <ReactMarkdown
+          source={content}
+          />
+        </div>
+      </section>
+    </Layout>
+  )
+}
+
+export default TeamDr
+export const teamQuery = graphql`
+  query TeamsQuery($slug: String){
+      strapiTeams(slug: { eq: $slug }) {
+    Specialization
+    Name
+    Content
+    Photo {
+      childImageSharp {
+        fixed(width: 1000){
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+  }
+`

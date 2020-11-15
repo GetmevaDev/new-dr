@@ -1,0 +1,77 @@
+@import '../utils/mixins.scss';
+@import '../utils/vars.scss';
+@import '../utils/fonts.scss';
+
+
+
+
+
+
+
+
+@include mediaWidth_992 {
+
+
+  .section-header_pages {
+    h2 {
+      font-size: 42px;
+    }
+  }
+
+
+
+
+
+  .section-about {
+    padding-left: 15px;
+    padding-right: 15px;
+    transform: translateY(0);
+
+    .content {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+
+      .block-deckription {
+        padding-right: 0;
+
+        .section-title {
+          text-align: center;
+
+          &:after {
+            margin-left: auto;
+          }
+        }
+      }
+
+
+      .block-img {
+        width: 100%;
+        height: auto;
+
+        img {
+          max-width: 100%;
+          height: auto;
+          transform: translate(0);
+        }
+      }
+    }
+  }
+
+}
+
+
+@include mediaWidth_424 {
+
+  .section-about {
+    .content {
+      .block-img {
+        flex-basis: 200px !important;
+
+        img {
+          max-width: 100% !important;
+          max-height: 100% !important;
+        }
+      }
+    }
+  }
+}
