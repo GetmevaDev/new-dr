@@ -30,20 +30,12 @@ const data = useStaticQuery(graphql`
             return(
               <a
                 key={elem.node.id}
-                href={`/${link}`} className="link-services">{title}</a>
+                href={`/services/${link}`} className="link-services">{title}</a>
             )
           })
         }
 
-        {/*<a href="" className="link-services">Dental Crowns</a>*/}
-        {/*<a href="" className="link-services">Invisalign</a>*/}
-        {/*<a href="" className="link-services">Dental Veneers</a>*/}
-        {/*<a href="" className="link-services">Bridges and Dentures</a>*/}
-        {/*<a href="" className="link-services">Dental Implants and Implant Crowns</a>*/}
-        {/*<a href="" className="link-services">Socket Preservation</a>*/}
-        {/*<a href="" className="link-services">Tooth Extraction</a>*/}
-        {/*<a href="" className="link-services">Root Canal </a>*/}
-        {/*<a href="" className="link-services">BPA FREE Dental Fillings</a>*/}
+   
       </div>
     </section>
   )
