@@ -24,7 +24,7 @@ class PatientSurveyForm extends React.Component {
 
         $.ajax({
           type: 'POST',
-          url: 'http://localhost:1337/information-patients',
+          url: 'https://happy-denta-smile.herokuapp.com/information-patients',
           data: formData
         }).done(function(){
           $form[0].reset();

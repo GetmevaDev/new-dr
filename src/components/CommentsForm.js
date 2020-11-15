@@ -25,7 +25,7 @@ componentDidMount() {
 
       $.ajax({
         type: 'POST',
-        url: 'http://localhost:1337/comments',
+        url: 'https://happy-denta-smile.herokuapp.com/comments',
         data: formData
       }).done(function(){
         $form[0].reset();
