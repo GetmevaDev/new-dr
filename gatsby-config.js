@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Happy Smiles Dental',
+    title: 'Dentist New Hyde Park: Dr. Diana Gerov - Near You',
     description: 'Gatsby blog with Strapi',
     author: 'Strapi team'
   },
@@ -75,7 +75,7 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/favicon.png', // This path is relative to the root of the site.
       },
     },
     'gatsby-plugin-offline',

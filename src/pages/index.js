@@ -29,7 +29,7 @@ const IndexPage = ({ data }) => {
             <Description />
             <SectionAdvantageIndex />
             <CommentSlider />
-            {/*увеличить margin в слайдере*/}
+
             <SectionReason />
 
             <SectionAppointment
