@@ -68,7 +68,7 @@ const FooterContact = () =>(
           </div>
 
           <a className="footer-contact"
-             href={`tel:${data.contact.edges[0].node.Link_Make_An_Appointment.NumberPhone}`}>{data.contact.edges[0].node.NumberPhone}</a>
+             href={`tel:${data.contact.edges[0].node.NumberPhone}`}>{data.contact.edges[0].node.NumberPhone}</a>
           <MakeAnAppointment
             classItem="footer-appointment"
           />
