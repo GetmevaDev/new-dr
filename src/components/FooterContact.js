@@ -46,7 +46,7 @@ const FooterContact = () =>(
         <div className="footer-logo">
 
           <Link
-            to={`#`}
+            to={`/`}
           >
             <Img
               className="logo-link"

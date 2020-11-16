@@ -51,7 +51,7 @@ const Navbar = () => {
               <nav className="site-header_nav">
                 <ul className="site-nav_items row">
                   <li className="adaptive_menu_logo order_0">
-                    <Link to={"#"}
+                    <Link to={"/"}
                           className="adaptive_menu_logo"
                     >
                       <Img

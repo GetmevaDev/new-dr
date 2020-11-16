@@ -64,7 +64,7 @@ const ContactNavbar = () => {
             </button>
             <div className="container row padding-contact-block">
               <div className="site-header_contact-block">
-                <Link to={`#`}>
+                <Link to={`/`}>
                   <Img
                     className="logo-link"
                     fixed={data.logo.edges[0].node.Logo.childImageSharp.fixed}
