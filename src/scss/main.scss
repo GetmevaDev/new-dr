@@ -1411,8 +1411,8 @@ position: relative;
 
   .rating_group{
     position: relative;
-    width: 5.5em;
-    height: 1em;
+    width: 100px;
+    height: 2em;
     left: 20px;
     .rating_star:checked,
     .rating_star:hover{
@@ -1467,6 +1467,12 @@ position: relative;
 .section-form_comment {
   background: #efefef;
 
+  .container{
+    @include mediaWidth_480{
+      max-width: 100%;
+    }
+  }
+
   legend {
 
 
@@ -1484,9 +1490,8 @@ position: relative;
 
   .rating_form {
     max-width: 680px;
-
     padding-left: 20px;
-    margin: 0 auto 20px;
+    margin: 10px auto 20px auto;
 
     .rating-item {
       font-size: 25px;
@@ -2039,6 +2044,14 @@ position: relative;
   max-width: 100%;
   font-weight: 900;
   font-size: 500px;
+  @include mediaWidth_900{
+    font-size: 340px;
+  }
+  @include mediaWidth_624{
+    font-size: 170px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+  }
   font-family: $headingFonts;
   line-height: 1;
   text-align: center;
@@ -2153,6 +2166,12 @@ position: relative;
     }
   }
 
+}
+
+.Go_back_to_homepage{
+  @include mediaWidth_624{
+    top: 100% !important;
+  }
 }
 
 .section-video-comment {

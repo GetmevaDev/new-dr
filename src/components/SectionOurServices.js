@@ -35,7 +35,7 @@ const data = useStaticQuery(graphql`
           })
         }
 
-   
+
       </div>
     </section>
   )

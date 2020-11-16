@@ -87,8 +87,8 @@ const ContactNavbar = () => {
               </div>
 
               <div className="contact_header">
-                <Link className="contact"
-                   to={`tel:${data.contact.edges[0].node.NumberPhone}`}>{data.contact.edges[0].node.NumberPhone}</Link>
+                <a className="contact"
+                   href={`tel:${data.contact.edges[0].node.NumberPhone}`}>{data.contact.edges[0].node.NumberPhone}</a>
                 {/*<a className="appointment" href="#">Make an Appointment</a>*/}
                 <MakeAnAppointment
                   classItem={`appointment`}
