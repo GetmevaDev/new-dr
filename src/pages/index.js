@@ -1,5 +1,7 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
+import { Helmet } from "react-helmet"
+
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -23,6 +25,19 @@ const IndexPage = ({ data }) => {
 
     return(
         <Layout>
+          <Helmet>
+            <title>Happy Smile Dental</title>
+            <meta name="description" content={data.metaData.description} />
+            <meta name="keywords" content={data.metaData.keywords} />
+            <meta property="og:title" content={data.metaData.title}/>
+            <meta property="og:type" content="" />
+            <meta property="og:description" content={data.metaData.description} />
+            <meta property="og:image" content="" />
+            <meta property="og:locale" content="en_US" />
+            <meta property="og:url" content={data.metaData.url} />
+            <link rel="canonical" href={data.metaData.url} />
+
+          </Helmet>
             <SEO title="Home" />
             <SectionHeader />
             <SectionConditions />
@@ -34,7 +49,7 @@ const IndexPage = ({ data }) => {
 
             <SectionAppointment
               classSection={`section-appointment`}
-              background={data.allStrapiHomepageElements.edges[0].node.BackgroundSectionAppointment.childImageSharp.fluid || null}
+              background={data.backgroundAppointment.edges[0].node.BackgroundSectionAppointment.childImageSharp.fluid || null}
               classElem={`appointment`}
             />
           <SectionOurServices />
@@ -50,7 +65,7 @@ const IndexPage = ({ data }) => {
 export default IndexPage
 export const BgIndexAppointment = graphql`
   query BgIndexAppointment{
-      allStrapiHomepageElements {
+     backgroundAppointment: allStrapiHomepageElements {
     edges {
       node {
         BackgroundSectionAppointment {
@@ -61,6 +76,14 @@ export const BgIndexAppointment = graphql`
           }
         }
       }
+    }
+  }
+  metaData: site {
+    siteMetadata {
+      description
+      keywords
+      title
+      url
     }
   }
   }

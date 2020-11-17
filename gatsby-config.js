@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: 'Dentist New Hyde Park: Dr. Diana Gerov - Near You',
-    description: 'Gatsby blog with Strapi',
+    description: 'Dentist New Hyde Park: Dr. Diana Gerov - Near You',
+    keywords: `blog web development`,
+    url: `https://dr-dianagerov-dev.netlify.app`,
     author: 'Strapi team'
   },
   plugins: [
