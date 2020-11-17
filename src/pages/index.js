@@ -29,16 +29,19 @@ const IndexPage = ({ data }) => {
             <title>Happy Smile Dental</title>
             <meta name="description" content={data.metaData.description} />
             <meta name="keywords" content={data.metaData.keywords} />
-            <meta property="og:title" content={data.metaData.title}/>
-            <meta property="og:type" content="" />
+
+
             <meta property="og:description" content={data.metaData.description} />
-            <meta property="og:image" content="" />
+            <meta property="og:image" content={data.metaData.siteMetadata.image} />
             <meta property="og:locale" content="en_US" />
             <meta property="og:url" content={data.metaData.url} />
             <link rel="canonical" href={data.metaData.url} />
 
           </Helmet>
-            <SEO title="Home" />
+            <SEO
+              title={data.metaData.siteMetadata.title}
+
+            />
             <SectionHeader />
             <SectionConditions />
             <Description />
@@ -84,6 +87,7 @@ export const BgIndexAppointment = graphql`
       keywords
       title
       url
+      image
     }
   }
   }
