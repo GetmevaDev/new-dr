@@ -32,7 +32,7 @@ const IndexPage = ({ data }) => {
 
 
             <meta property="og:description" content={data.metaData.description} />
-            <meta property="og:image" content={data.metaData.siteMetadata.image} />
+            <meta property="og:image" content={data.siteLogo.edges[0].node.Logo.childImageSharp.fixed.src} />
             <meta property="og:locale" content="en_US" />
             <meta property="og:url" content={data.metaData.url} />
             <link rel="canonical" href={data.metaData.url} />
@@ -88,6 +88,19 @@ export const BgIndexAppointment = graphql`
       title
       url
       image
+    }
+  }
+  siteLogo:  allStrapiSiteLogo {
+    edges {
+      node {
+        Logo {
+          childImageSharp {
+            fixed(width: 200){
+            ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
     }
   }
   }
