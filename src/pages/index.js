@@ -25,23 +25,8 @@ const IndexPage = ({ data }) => {
 
     return(
         <Layout>
-          <Helmet>
-            <title>Happy Smile Dental</title>
-            <meta name="description" content={data.metaData.description} />
-            <meta name="keywords" content={data.metaData.keywords} />
 
-
-            <meta property="og:description" content={data.metaData.description} />
-            <meta property="og:image" content={data.siteLogo.edges[0].node.Logo.childImageSharp.fixed.src} />
-            <meta property="og:locale" content="en_US" />
-            <meta property="og:url" content={data.metaData.url} />
-            <link rel="canonical" href={data.metaData.url} />
-
-          </Helmet>
-            <SEO
-              title={data.metaData.siteMetadata.title}
-
-            />
+            <SEO />
             <SectionHeader />
             <SectionConditions />
             <Description />
@@ -81,27 +66,6 @@ export const BgIndexAppointment = graphql`
       }
     }
   }
-  metaData: site {
-    siteMetadata {
-      description
-      keywords
-      title
-      url
-      image
-    }
-  }
-  siteLogo:  allStrapiSiteLogo {
-    edges {
-      node {
-        Logo {
-          childImageSharp {
-            fixed(width: 200){
-            ...GatsbyImageSharpFixed
-            }
-          }
-        }
-      }
-    }
-  }
+
   }
 `

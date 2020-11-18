@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: 'Happy Smile Dental',
+    titleTemplate: "%s · Dentist New Hyde Park: Dr. Diana Gerov - Near You",
     description: 'Dentist New Hyde Park: Dr. Diana Gerov - Near You',
     url: 'https://dr-dianagerov-dev.netlify.app',
-    image: "/images/gatsby-astronaut.png",
-    keywords: 'blog',
-    author: 'Strapi team'
+    image: "/images/adaptive_logo.png",
+    twitterUsername: "@occlumency",
   },
   plugins: [
     'gatsby-plugin-react-helmet',
