@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Happy Smile Dental',
-    titleTemplate: "%s · Dentist New Hyde Park: Dr. Diana Gerov - Near You",
+    titleTemplate: "%s | Dentist New Hyde Park: Dr. Diana Gerov - Near You",
     description: 'Dentist New Hyde Park: Dr. Diana Gerov - Near You',
     url: 'https://dr-dianagerov-dev.netlify.app',
     image: "/static/5b94ac94748251ef31e4653d1182bdfb/513be/38fdb1270428cd7f3fc415c1559e1101.jpg",
