@@ -7,7 +7,7 @@ import { useStaticQuery, graphql } from "gatsby"
 const SEO = ({ title, description, image, article }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
-
+    console.log(site)
   const {
     defaultTitle,
     titleTemplate,
@@ -86,5 +86,14 @@ const query = graphql`
         twitterUsername
       }
     }
+    logo: strapiSiteLogo {
+    Logo {
+      childImageSharp {
+        fixed(width: 100){
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
   }
 `
