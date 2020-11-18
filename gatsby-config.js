@@ -4,7 +4,7 @@ module.exports = {
     titleTemplate: "%s · Dentist New Hyde Park: Dr. Diana Gerov - Near You",
     description: 'Dentist New Hyde Park: Dr. Diana Gerov - Near You',
     url: 'https://dr-dianagerov-dev.netlify.app',
-    image: "/adaptive_logo.png",
+    image: "/20180815_124031-1-1.jpg",
     twitterUsername: "@occlumency",
   },
   plugins: [
