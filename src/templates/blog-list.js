@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SectionHeaderBlog from "../components/Blog/SectionHeaderBlog"
 import "../scss/main.scss"
+import SEO from "../components/seo"
 
 
 
@@ -20,6 +21,7 @@ export default class BlogList extends React.Component {
     };
     return (
       <Layout>
+        <SEO title="Happy Smile Dental" />
         <SectionHeaderBlog/>
         <section className="section_blog_list">
          <h2 className="section-title">Recent Posts</h2>

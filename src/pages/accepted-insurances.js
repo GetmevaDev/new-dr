@@ -7,6 +7,7 @@ import SectionHeaderAcceptedInsurances from "../components/Accepted Insurances/S
 import SectionInsurances from "../components/Accepted Insurances/SectionInsurances"
 import SectionAppointment from "../components/SectionAppointment"
 import "../scss/main.scss"
+import SEO from "../components/seo"
 
 
 const AcceptedInsurances = () => {
@@ -34,6 +35,7 @@ const AcceptedInsurances = () => {
 
   return(
     <Layout>
+      <SEO title="Accepted Insurances" />
       <SectionHeaderAcceptedInsurances />
       <SectionInsurances />
       <SectionAppointment

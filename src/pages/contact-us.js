@@ -4,11 +4,13 @@ import SectionHeaderContactUs from "../components/ContactUs/SectionHeaderContact
 import SectionContact from "../components/ContactUs/SectionContact"
 import SectionFollowUs from "../components/ContactUs/SectionFollowUs"
 import "../scss/main.scss"
+import SEO from "../components/seo"
 
 const ContactUs = () => {
 
   return(
     <Layout>
+      <SEO title="Contact Us" />
       <SectionHeaderContactUs />
       <SectionContact />
       <SectionFollowUs />

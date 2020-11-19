@@ -16,6 +16,7 @@ import ServicesContent from "../components/ServicesTemplateComponents/ServicesCo
 import AdaptiveAccordionBlogs from "../components/ServicesTemplateComponents/AdaptivAccordionBlogs"
 import "../scss/main.scss"
 import AccordionCard from "../components/ServicesTemplateComponents/AccordionCard"
+import SEO from "../components/seo"
 
 
 const ServicesTemplate = ({data}) => {
@@ -24,6 +25,7 @@ const ServicesTemplate = ({data}) => {
 
   return(
     <Layout>
+      <SEO title={data.onePage.Title} />
       <SectionTitle
         titleName={data.onePage.Title}
       />

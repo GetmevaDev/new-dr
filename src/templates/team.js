@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown"
 import Layout from "../components/layout"
 import MakeAnAppointment from "../components/MakeAnAppointment"
 import "../scss/main.scss"
+import SEO from "../components/seo"
 
 
 const TeamDr = ({ data }) => {
@@ -13,6 +14,7 @@ const TeamDr = ({ data }) => {
   const content = data.strapiTeams.Content || null;
   return(
     <Layout>
+      <SEO title={name} />
       <section className="section-testimonial">
         <div className="container row">
           <div className="heading-pages">

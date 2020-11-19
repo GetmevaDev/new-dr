@@ -10,6 +10,7 @@ import SectionAppointment from "../components/SectionAppointment"
 import Map from "../components/Map"
 
 import "../scss/main.scss"
+import SEO from "../components/seo"
 
 
 
@@ -38,6 +39,7 @@ const Testimonials = () => {
 
   return(
     <Layout>
+      <SEO title="Testimonials" />
       <SectionHeaderTestimonial />
       <Form />
       <CommentSlider

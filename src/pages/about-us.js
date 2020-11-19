@@ -39,7 +39,7 @@ const AboutUs = () => {
 
   return(
     <Layout>
-      {console.log(data.allStrapiAboutUs.edges[0].node.SectionWithAppointment)}
+      <SEO title="About Us" />
       <SectionHeaderAboutUs />
       <AboutOurPractice />
       <SectionAwards />

@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown"
 
 import Layout from "../components/layout"
 import "../scss/main.scss"
+import SEO from "../components/seo"
 
 function SectionAdvantage(prop){
   const data = useStaticQuery(graphql`
@@ -40,6 +41,7 @@ function SectionAdvantage(prop){
   return(
 
     <Layout>
+      <SEO title="Technology" />
       <div className="container sections-technology">
         {
           data.allStrapiAdvantages.edges.map((section, i) => {

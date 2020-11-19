@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SectionHeaderArticle from "../components/Article Components/SectionHeaderArticle"
 import MainSection from "../components/Article Components/MainSection"
 import "../scss/main.scss"
+import SEO from "../components/seo"
 const Article = ({ data }) => {
   // const bgSectionHeaderArticle = data.strapiBlogArchives.Background.childImageSharp.fixed.src || null;
   const titleSectionHeader = data.strapiBlogArchives.Title || "";
@@ -13,6 +14,7 @@ const Article = ({ data }) => {
   console.log()
   return(
     <Layout>
+      <SEO title={titleSectionHeader} />
       <SectionHeaderArticle
         title={titleSectionHeader}
       />
