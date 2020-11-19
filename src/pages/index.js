@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => {
     return(
         <Layout>
 
-            <SEO title="Home" />
+            <SEO title={"Dr. Diana Gerov, DDS"} />
             <SectionHeader />
             <SectionConditions />
             <Description />
