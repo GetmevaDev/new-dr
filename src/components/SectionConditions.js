@@ -53,7 +53,6 @@ const SectionConditions = () => (
             }
 
           </Swiper>
-          {console.log(data)}
         </div>
 
       </section>

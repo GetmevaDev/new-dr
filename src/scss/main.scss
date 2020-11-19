@@ -1279,6 +1279,16 @@ position: relative;
     font-weight: 300;
     margin-bottom: 28px;
     color: #3f474a;
+    transition: .3s;
+  }
+  .open_comment{
+    max-height: 2000px !important;
+    transition: max-height .6s;
+  }
+  .ReadMoreComment{
+    background: transparent;
+    color: #c57916;
+    transition: .3s;
   }
 
   .name_user {
@@ -2204,7 +2214,7 @@ position: relative;
 .section-name-services {
 
   padding: rem(180) 0;
-  background: #014284;
+  background: #a6640e;
 
 
   h3,
@@ -2227,8 +2237,13 @@ position: relative;
 
 
 .section-services_all {
-
-  padding: rem(100) 0;
+.row{
+  @include mediaWidth_992{
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+   padding: rem(100) 0;
   .card-service{
     display: none;
     @include mediaWidth_992{
@@ -2395,7 +2410,10 @@ position: relative;
 
   .service-content {
     @include mediaWidth_992{
-      display: none;
+      border-left: none;
+      padding-left: 0;
+      padding-right: 0;
+
     }
 
     flex-basis: 738px;

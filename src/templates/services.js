@@ -32,16 +32,7 @@ const ServicesTemplate = ({data}) => {
 
       <section className="section-services_all">
         <div className="container row">
-          {
-            data.fullContent.edges.map(item =>(
-              <AdaptiveAccordionBlogs
-                key={item.node.id}
-                title={item.node.Title}
-                content={item.node.Content}
 
-              />
-            ))
-          }
 
 
           <nav className="nav-services_all">
