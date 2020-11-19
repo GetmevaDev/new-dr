@@ -979,6 +979,11 @@ position: relative;
     left: 0;
     background: rgba(0, 0, 0, .5);
   }
+  .container{
+    @include mediaWidth_480{
+      max-width: 100%;
+    }
+  }
 }
 
 
@@ -1289,6 +1294,7 @@ position: relative;
     background: transparent;
     color: #c57916;
     transition: .3s;
+    margin-bottom: 30px;
   }
 
   .name_user {
