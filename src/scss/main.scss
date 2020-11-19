@@ -1978,6 +1978,9 @@ position: relative;
           @include mediaWidth_480{
             left: -199px !important;
           }
+          @include mediaWidth_424{
+            top: -70px !important
+          }
 
         }
       }
