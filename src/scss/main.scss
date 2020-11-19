@@ -1762,13 +1762,24 @@ position: relative;
   width: auto !important;
   left: auto !important;
   margin: 0 auto;
-
-
   position: relative;
+  .row{
+    @include mediaWidth_900{
+    flex-direction: column;
+    }
+  }
+  .container{
+    @include mediaWidth_424{
+      max-width: 100%;
+    }
+  }
   article{
     flex-basis: 70%;
     padding: 0 16px;
     padding-right: 30px;
+    @include mediaWidth_424{
+      padding-right: 0;
+    }
     .data_article{
       font: 700 16px/1 $lightFont;
       text-transform: uppercase;
@@ -2119,6 +2130,10 @@ position: relative;
     font-size: 20px;
     line-height: 1.6;
     font-weight: 300;
+    @include mediaWidth_424{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
     h1,h2,h3,h4,h6,h6{
       color: #c57916;
       text-align: left;
