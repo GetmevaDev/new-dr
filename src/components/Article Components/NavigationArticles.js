@@ -6,7 +6,7 @@ const NavigationArticles = () =>{
 
   const data = useStaticQuery(graphql`
     query NavigationArticlesQuery{
-       allStrapiBlogArchives {
+       allStrapiBlogArchives(limit: 7) {
         edges {
           node {
             Title
