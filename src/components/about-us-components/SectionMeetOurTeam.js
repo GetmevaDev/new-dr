@@ -63,9 +63,10 @@ const SectionMeetOurTeam = () =>{
                 className={`card-dr`}
               >
                 <div className="img_team">
-                  <Img
-                    fixed={elem.Photo.childImageSharp.fixed}
-                  />
+                  <img src={elem.Photo.childImageSharp.fixed.src} alt="" />
+                  {/*<Img*/}
+                  {/*  fixed={elem.Photo.childImageSharp.fixed}*/}
+                  {/*/>*/}
                 </div>
                 <h3>{elem.Name}</h3>
                 <h4>{elem.Specialization}</h4>
