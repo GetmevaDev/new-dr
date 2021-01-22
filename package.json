@@ -20,6 +20,7 @@
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sass": "^2.3.14",
     "gatsby-plugin-sharp": "^2.6.36",
+    "gatsby-plugin-sitemap": "^2.11.0",
     "gatsby-remark-custom-blocks": "^2.3.12",
     "gatsby-source-filesystem": "^2.3.30",
     "gatsby-source-strapi": "0.0.12",

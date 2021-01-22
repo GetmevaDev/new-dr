@@ -6,10 +6,12 @@ module.exports = {
     url: 'https://dr-dianagerov-dev.netlify.app',
     image: "/static/5b94ac94748251ef31e4653d1182bdfb/513be/38fdb1270428cd7f3fc415c1559e1101.jpg",
     twitterUsername: "@occlumency",
+    siteUrl: `https://drdianagerov.com`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {

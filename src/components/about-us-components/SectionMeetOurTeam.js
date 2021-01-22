@@ -76,20 +76,7 @@ const SectionMeetOurTeam = () =>{
           }
 
         </Swiper>
-        {/*<div className="swiper-container_team">*/}
-        {/*  <div className="swiper-wrapper">*/}
-        {/*    <div className="swiper-slide card-dr">*/}
-        {/*      <div className="img_team">*/}
 
-        {/*      </div>*/}
-        {/*      <h3>Dr. Diana Gerov, DDS</h3>*/}
-        {/*      <h4>Doctor of Dental Surgery</h4>*/}
-        {/*      <a href="#"><span className="fa fa-angle-right"></span></a>*/}
-        {/*    </div>*/}
-
-        {/*  </div>*/}
-
-        {/*</div>*/}
       </div>
     </section>
   )

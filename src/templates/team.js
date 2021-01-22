@@ -46,17 +46,17 @@ const TeamDr = ({ data }) => {
 export default TeamDr
 export const teamQuery = graphql`
   query TeamsQuery($slug: String){
-      strapiTeams(slug: { eq: $slug }) {
-    Specialization
-    Name
-    Content
-    Photo {
-      childImageSharp {
-        fixed(width: 1000){
-          ...GatsbyImageSharpFixed
+        strapiTeams(slug: { eq: $slug }) {
+      Specialization
+      Name
+      Content
+      Photo {
+        childImageSharp {
+          fixed(width: 1000){
+            ...GatsbyImageSharpFixed
+          }
         }
       }
     }
-  }
   }
 `
