@@ -24,11 +24,14 @@ const Layout = ({ children }) => {
   `)
 
   return (
+    <>
+
     <div className={`content_container`}>
       <Header />
       <main className={`site-main`}>{children}</main>
       <Footer />
     </div>
+      </>
   )
 }
 
