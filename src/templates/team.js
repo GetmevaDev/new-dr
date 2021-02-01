@@ -25,7 +25,7 @@ const TeamDr = ({ data }) => {
             classItem={`appointment`}
             />
           </div>
-          <div className="portrait-dr">
+          <div className="portrait-dr new_width_dds">
             <img src={photo} alt={alt} />
             {/*<Img*/}
             {/*  fixed={image}*/}
