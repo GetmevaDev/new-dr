@@ -21,11 +21,8 @@ const SectionMeetOurTeam = () =>{
               Specialization
               Link
               Photo {
-                childImageSharp {
-                  fixed(width: 550){
-                    ...GatsbyImageSharpFixed
-                  }
-                }
+                  alternativeText
+                  url
               }
             }
           }
@@ -63,7 +60,7 @@ const SectionMeetOurTeam = () =>{
                 className={`card-dr`}
               >
                 <div className="img_team">
-                  <img src={elem.Photo.childImageSharp.fixed.src} alt="" />
+                  <img src={elem.Photo[0].url} alt={elem.Photo[0].alternativeText} />
                   {/*<Img*/}
                   {/*  fixed={elem.Photo.childImageSharp.fixed}*/}
                   {/*/>*/}

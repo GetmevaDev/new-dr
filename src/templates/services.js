@@ -25,7 +25,7 @@ const ServicesTemplate = ({data}) => {
 
   return(
     <Layout>
-      <SEO title={data.onePage.Title} />
+      <SEO seo={data.onePage.SEO_Services} />
       <SectionTitle
         titleName={data.onePage.Title}
       />
@@ -64,17 +64,9 @@ const ServicesTemplate = ({data}) => {
 
             </ul>
           </nav>
-
-
           <ServicesContent
             content={data.onePage.Content}
           />
-
-
-
-          {/*<ServicesNavigationLeft />*/}
-
-
         </div>
       </section>
       <FAQ/>
@@ -90,6 +82,11 @@ export const ContentQuery = graphql`
        slug
         Title
         Content
+          SEO_Services {
+              Title
+              Image_Url
+              Description
+          }
       }
       fullContent: allStrapiServices {
           edges {
@@ -101,5 +98,6 @@ export const ContentQuery = graphql`
             }
           }
       }
+        
     }
   `

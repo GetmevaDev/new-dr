@@ -30,15 +30,8 @@ componentDidMount() {
           ClinicGallery {
             AltText
             Photo {
-              childImageSharp {
-              sizes{
-                src
-              }
-               fixed(width: 1000){
-                  ...GatsbyImageSharpFixed
-                }
-            
-              }
+               alternativeText
+               url
             }
           }
         }
@@ -71,8 +64,8 @@ componentDidMount() {
 
                     <div className={`swiper-slide card-gallery`}>
                       <img
-
-                        src={elem.Photo.childImageSharp.fixed.src}
+                        src={elem.Photo[0].url}
+                        alt={elem.Photo[0].alternativeText}
                       />
                     </div>
 

@@ -20,11 +20,8 @@ const SectionAwards = () =>{
                 id
                 Name
                 image {
-                  childImageSharp {
-                    fixed(width: 100){
-                      ...GatsbyImageSharpFixed
-                    }
-                  }
+                    alternativeText
+                    url
                 }
               }
             }
@@ -67,10 +64,10 @@ const SectionAwards = () =>{
               key={elem.id}
               >
 
-                <Img
-                  fixed={elem.image.childImageSharp.fixed}
-                />
-
+                {/*<Img*/}
+                {/*  fixed={elem.image.childImageSharp.fixed}*/}
+                {/*/>*/}
+                <img src={elem.image[0].url} alt={elem.image[0].alternativeText} />
                 <h3 className="awards_title">{elem.Name}</h3>
               </SwiperSlide>
             ))
@@ -83,35 +80,6 @@ const SectionAwards = () =>{
             </button>
         </Swiper>
 
-
-        {/*<div className="swiper-container_awards">*/}
-        {/*  <div className="swiper-wrapper">*/}
-        {/*    <div className="swiper-slide">*/}
-        {/*      <img className="swiper-img_awards" src="/assets/img/ada_logo.jpg" alt="">*/}
-        {/*        <h3 className="awards_title">Member American Dental Association</h3>*/}
-        {/*    </div>*/}
-        {/*    <div className="swiper-slide">*/}
-        {/*      <img className="swiper-img_awards" src="/assets/img/aafc_logo.jpg" alt="">*/}
-        {/*        <h3 className="awards_title">Member American Academy Of Facial Cosmetics</h3>*/}
-        {/*    </div>*/}
-        {/*    <div className="swiper-slide">*/}
-        {/*      <img className="swiper-img_awards" src="/assets/img/agd_logo.jpg" alt="">*/}
-        {/*        <h3 className="awards_title">Member Academy of General Dentistry</h3>*/}
-        {/*    </div>*/}
-        {/*    <div className="swiper-slide">*/}
-        {/*      <img className="swiper-img_awards" src="/assets/img/nysda-logo.jpg" alt="">*/}
-        {/*        <h3 className="awards_title">Member-New York State Dental Association</h3>*/}
-        {/*    </div>*/}
-
-        {/*  </div>*/}
-        {/*  <!-- Add Arrows -->*/}
-        {/*  <button className="swiper-button-next ">*/}
-        {/*    <span className="fa fa-long-arrow-right"></span>*/}
-        {/*  </button>*/}
-        {/*  <button className="swiper-button-prev">*/}
-        {/*    <span className="fa fa-long-arrow-left"></span>*/}
-        {/*  </button>*/}
-        {/*</div>*/}
 
       </div>
 

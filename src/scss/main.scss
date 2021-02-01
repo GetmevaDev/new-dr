@@ -456,7 +456,7 @@ button.swiper-pagination-bullet {
     height: 100% !important;
     img{
       width: 150px !important;
-      height: 50px !important;
+
     }
 
   }
@@ -1846,6 +1846,10 @@ position: relative;
 //}
 .new_width{
   width: 1470px !important;
+  max-height: 563px;
+  img{
+    max-height: 563px !important;
+  }
 }
 
 .section_blog_list{

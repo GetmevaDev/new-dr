@@ -10,11 +10,12 @@ import SEO from "../components/seo"
 const TeamDr = ({ data }) => {
   const specialization = data.strapiTeams.Specialization || null;
   const name = data.strapiTeams.Name || null;
-  const photo = data.strapiTeams.Photo.childImageSharp.fixed.src || null;
+  const photo = data.strapiTeams.Photo[0].url || null;
+  const alt = data.strapiTeams.Photo[0].alternativeText || null;
   const content = data.strapiTeams.Content || null;
   return(
     <Layout>
-      <SEO title={name} />
+
       <section className="section-testimonial">
         <div className="container row">
           <div className="heading-pages">
@@ -25,7 +26,7 @@ const TeamDr = ({ data }) => {
             />
           </div>
           <div className="portrait-dr">
-            <img src={photo} alt="" />
+            <img src={photo} alt={alt} />
             {/*<Img*/}
             {/*  fixed={image}*/}
             {/*/>*/}
@@ -51,11 +52,8 @@ export const teamQuery = graphql`
       Name
       Content
       Photo {
-        childImageSharp {
-          fixed(width: 1000){
-            ...GatsbyImageSharpFixed
-          }
-        }
+          url
+          alternativeText
       }
     }
   }

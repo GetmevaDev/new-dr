@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import Layout from "../components/layout"
 import SectionHeaderBlog from "../components/Blog/SectionHeaderBlog"
 import "../scss/main.scss"
@@ -11,7 +11,7 @@ export default class BlogList extends React.Component {
   render() {
     const posts = this.props.data.allStrapiBlogArchives.edges;
     const { currentPage, numPages } = this.props.pageContext
-    console.log(numPages)
+
     const activePage = {
       backgroundColor: '#f9b43d',
       color: '#3f474a',
@@ -21,7 +21,7 @@ export default class BlogList extends React.Component {
     };
     return (
       <Layout>
-        <SEO title="Happy Smile Dental" />
+
         <SectionHeaderBlog/>
         <section className="section_blog_list">
          <h2 className="section-title">Recent Posts</h2>

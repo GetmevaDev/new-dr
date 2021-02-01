@@ -15,11 +15,8 @@ const SectionHeaderContactUs = () => {
             SubTitle
             Title
             Image {
-              childImageSharp {
-                fixed(width: 1000){
-                  ...GatsbyImageSharpFixed
-                }
-              }
+                url
+                alternativeText
             }
           }
         }
@@ -29,7 +26,8 @@ const SectionHeaderContactUs = () => {
 
   const subTitle = data.allStrapiContactUs.edges[0].node.SubTitle || null;
   const title = data.allStrapiContactUs.edges[0].node.Title || null;
-  const img = data.allStrapiContactUs.edges[0].node.Image.childImageSharp.fixed.src || null;
+  const img = data.allStrapiContactUs.edges[0].node.Image[0].url || null;
+  const alt = data.allStrapiContactUs.edges[0].node.Image[0].alternativeText || null;
 
   return(
     <section className="section-testimonial">

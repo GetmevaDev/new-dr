@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import MakeAnAppointment from "../MakeAnAppointment"
 import Layout from "../layout"
+import SEO from "../seo"
 
 
 const SectionHeaderBlog = () => {
@@ -11,13 +12,15 @@ const SectionHeaderBlog = () => {
     allStrapiBlog {
     edges {
       node {
+          SEO_Blog {
+              Title
+              Image_Url
+              Description
+          }
         Title
         Photo {
-          childImageSharp {
-            fixed(width: 1000){
-             ...GatsbyImageSharpFixed
-            }
-          }
+            url
+            alternativeText
         }
       }
     }
@@ -26,9 +29,12 @@ const SectionHeaderBlog = () => {
   `)
 
   const title = data.allStrapiBlog.edges[0].node.Title || null;
-  const photo = data.allStrapiBlog.edges[0].node.Photo.childImageSharp.fixed.src || null;
+  const photo = data.allStrapiBlog.edges[0].node.Photo[0].url || null;
+  const alt = data.allStrapiBlog.edges[0].node.Photo[0].alternativeText || null;
 
   return(
+    <>
+      <SEO seo={data.allStrapiBlog.edges[0].node.SEO_Blog}/>
     <section className="section-testimonial">
       <div className="container row">
         <div className="heading-pages">
@@ -37,11 +43,12 @@ const SectionHeaderBlog = () => {
           <a className="appointment" href={`#`}>View All Insurances We Accept</a>
         </div>
         <div className="portrait-dr new_width">
-          <img src={photo} alt="" />
+          <img src={photo} alt={alt} />
 
         </div>
       </div>
     </section>
+      </>
   )
 }
 

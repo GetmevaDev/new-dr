@@ -23,6 +23,11 @@ const Testimonials = () => {
         allStrapiTestimonials {
         edges {
           node {
+              SEO_Testimonials {
+                  Title
+                  Image_Url
+                  Description
+              }
             BackgroundAppointmentSection {
               childImageSharp {
                 fluid(maxWidth:2000, maxHeight: 300){
@@ -39,7 +44,7 @@ const Testimonials = () => {
 
   return(
     <Layout>
-      <SEO title="Testimonials" />
+      <SEO seo={data.allStrapiTestimonials.edges[0].node.SEO_Testimonials} />
       <SectionHeaderTestimonial />
       <Form />
       <CommentSlider

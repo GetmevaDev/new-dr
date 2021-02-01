@@ -33,11 +33,8 @@ const Navbar = () => {
           edges {
             node {
               AdaptiveLogo {
-                childImageSharp {
-                  fluid(maxWidth: 100){
-                      ...GatsbyImageSharpFluid
-                  }
-                }
+                 url
+          alternativeText
               }
             }
           }
@@ -54,9 +51,10 @@ const Navbar = () => {
                     <Link to={"/"}
                           className="adaptive_menu_logo"
                     >
-                      <Img
-                        fluid={data.logo.edges[0].node.AdaptiveLogo.childImageSharp.fluid}
-                      />
+                      {/*<Img*/}
+                      {/*  fluid={data.logo.edges[0].node.AdaptiveLogo.childImageSharp.fluid}*/}
+                      {/*/>*/}
+                      <img  src={data.logo.edges[0].node.AdaptiveLogo[0].url} alt={data.logo.edges[0].node.AdaptiveLogo[0].alternativeText} />
                     </Link>
                   </li>
                   {

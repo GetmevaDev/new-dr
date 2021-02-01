@@ -19,14 +19,10 @@ function SectionAdvantageIndex(){
               Link
                 TextLink
               }
-                      Image {
-          childImageSharp {
-            id
-            fluid {
-                    ...GatsbyImageSharpFluid
-            }
-          }
-        }
+                 Image {
+                     url
+                     alternativeText
+              }
             }
           }
         }
@@ -44,9 +40,10 @@ function SectionAdvantageIndex(){
             <Link to={`/${data.allStrapiAdvantages.edges[0].node.Link.Link}`} className="learn_more">{data.allStrapiAdvantages.edges[0].node.Link.TextLink}</Link>
           </div>
           <div className="container-img">
-            <Img
-              fluid={data.allStrapiAdvantages.edges[0].node.Image.childImageSharp.fluid}
-            />
+            {/*<Img*/}
+            {/*  fluid={data.allStrapiAdvantages.edges[0].node.Image.childImageSharp.fluid}*/}
+            {/*/>*/}
+            <img src={data.allStrapiAdvantages.edges[0].node.Image[0].url} alt={data.allStrapiAdvantages.edges[0].node.Image[0].alternativeText} />
           </div>
         </section>
 

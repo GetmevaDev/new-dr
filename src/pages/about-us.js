@@ -34,12 +34,19 @@ const AboutUs = () => {
       }
     }
   }
+      seo:  strapiAboutUs {
+          SEO_About_Us {
+              Description
+              Image_Url
+              Title
+          }
+      }
   }
   `)
 
   return(
     <Layout>
-      <SEO title="About Us" />
+      <SEO seo={data.seo.SEO_About_Us} />
       <SectionHeaderAboutUs />
       <AboutOurPractice />
       <SectionAwards />

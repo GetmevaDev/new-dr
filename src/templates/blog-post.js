@@ -11,10 +11,10 @@ const Article = ({ data }) => {
   const contentArticle = data.strapiBlogArchives.Content || "";
   const articleData = data.strapiBlogArchives.Data || ""
 
-  console.log()
+
   return(
     <Layout>
-      <SEO title={titleSectionHeader} />
+        <SEO seo={data.strapiBlogArchives.SEO_Blog_Archive} />
       <SectionHeaderArticle
         title={titleSectionHeader}
       />
@@ -34,6 +34,11 @@ export const articlesQuery = graphql`
          Title
          Data
          Content
+          SEO_Blog_Archive {
+              Description
+              Image_Url
+              Title
+          }
       }
   }
 `

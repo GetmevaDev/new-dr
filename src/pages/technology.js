@@ -21,16 +21,20 @@ function SectionAdvantage(prop){
                 TextLink
               }
                       Image {
-          childImageSharp {
-            id
-            fixed(width: 1000) {
-                    ...GatsbyImageSharpFixed
+                          url
+                          alternativeText
+              }
             }
           }
         }
+        seo:   strapiTechnologyPageSeo {
+            SEO_Technology {
+                Description
+                Image_Url
+                Title
             }
-          }
         }
+        
     }
 `)
 
@@ -41,14 +45,15 @@ function SectionAdvantage(prop){
   return(
 
     <Layout>
-      <SEO title="Technology" />
+      <SEO seo={data.seo.SEO_Technology} />
       <div className="container sections-technology">
         {
           data.allStrapiAdvantages.edges.map((section, i) => {
             const titleOne = section.node.TitleOne || null;
             const titleTwo = section.node.TitleTwo || null;
             const text = section.node.Text || null;
-            const img = section.node.Image.childImageSharp.fixed.src || null;
+            const img = section.node.Image[0].url || null;
+            const alt = section.node.Image[0].alternativeText || null;
 
             return(
                 <section
@@ -66,7 +71,7 @@ function SectionAdvantage(prop){
                       <Link to={`${section.node.Link.Link}`} className="learn_more">{section.node.Link.TextLink}</Link>)}
                   </div>
                   <div className="container-img">
-                    <img src={img} alt="" />
+                    <img src={img} alt={alt} />
 
                   </div>
                 </section>

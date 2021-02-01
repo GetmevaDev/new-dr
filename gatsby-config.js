@@ -64,7 +64,9 @@ module.exports = {
           'promotions-page',
           'site-logo',
           'testimonials',
-          'working-hours'
+          'working-hours',
+          `common-meta-data`,
+          `technology-page-seo`,
         ],
         queryLimit: 1000,
       },

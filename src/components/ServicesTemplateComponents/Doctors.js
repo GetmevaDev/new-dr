@@ -18,11 +18,8 @@ const Doctors = () => {
               Link
               
               Photo {
-                childImageSharp {
-                  fixed(width: 255){
-                     ...GatsbyImageSharpFixed
-                  }
-                }
+                  url
+                  alternativeText
               }
             }
           }
@@ -43,10 +40,10 @@ const Doctors = () => {
             <div className="img">
 
 
-              <Img
-                fixed={item.Photo !== null ? item.Photo.childImageSharp.fixed : ""}
-              />
-              {/*<img src="/assets/img/20180815_124031-1-1.jpg" alt="">*/}
+              {/*<Img*/}
+              {/*  fixed={item.Photo !== null ? item.Photo.childImageSharp.fixed : ""}*/}
+              {/*/>*/}
+              <img src={item.Photo !== null ? item.Photo[0].url : ""} alt={item.Photo !== null ? item.Photo[0].alternativeText : ""} />
             </div>
             <div className="name_dr">
               <h3 id="name">{item.Name}</h3>

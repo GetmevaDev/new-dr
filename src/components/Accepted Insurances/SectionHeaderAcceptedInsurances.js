@@ -16,20 +16,18 @@ const SectionHeaderAcceptedInsurances = () =>{
             SubTitle
             Title
             Photo {
-              childImageSharp {
-                fixed(width: 1000){
-                  ...GatsbyImageSharpFixed
-                }
-              }
+                alternativeText
+                url
             }
           }
         }
       }
     }
   `)
-  const subTitle = data.allStrapiAcceptedInsurances.edges[0].node.SubTitle || null;
-  const title = data.allStrapiAcceptedInsurances.edges[0].node.Title || null;
-  const image = data.allStrapiAcceptedInsurances.edges[0].node.Photo.childImageSharp.fixed.src || null;
+  const subTitle = data.allStrapiAcceptedInsurances.edges[0].node.SubTitle;
+  const title = data.allStrapiAcceptedInsurances.edges[0].node.Title;
+  const image = data.allStrapiAcceptedInsurances.edges[0].node.Photo[0].url;
+  const alt = data.allStrapiAcceptedInsurances.edges[0].node.Photo[0].alternativeText;
 
   return(
     <section className="section-testimonial">
@@ -39,7 +37,7 @@ const SectionHeaderAcceptedInsurances = () =>{
           <h2>{title}</h2>
         </div>
         <div className="portrait-dr w900">
-          <img src={image} alt="" />
+          <img src={image} alt={alt} />
         </div>
       </div>
     </section>

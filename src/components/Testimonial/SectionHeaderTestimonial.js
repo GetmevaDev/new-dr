@@ -10,11 +10,8 @@ const SectionHeaderTestimonial = ()=>{
         edges {
           node {
             Photo {
-              childImageSharp {
-                fixed(width: 1000){
-                  ...GatsbyImageSharpFixed
-                }
-              }
+                url
+                alternativeText
             }
           }
         }
@@ -22,7 +19,8 @@ const SectionHeaderTestimonial = ()=>{
     }
   `)
 
-  const image = data.allStrapiTestimonials.edges[0].node.Photo.childImageSharp.fixed.src || "";
+  const image = data.allStrapiTestimonials.edges[0].node.Photo[0].url || "";
+  const alt = data.allStrapiTestimonials.edges[0].node.Photo[0].alternativeText
 
   return(
     <section className="section-testimonial">
@@ -32,7 +30,7 @@ const SectionHeaderTestimonial = ()=>{
           <h2>Testimonials</h2>
         </div>
         <div className="portrait-dr">
-          <img src={image} alt="" />
+          <img src={image} alt={alt} />
           {/*<Img*/}
           {/*  fixed={image}*/}
           {/*/>*/}

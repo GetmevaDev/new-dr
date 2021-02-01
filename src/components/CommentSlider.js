@@ -45,11 +45,8 @@ class CommentSlider extends React.Component{
             rating
             Comment
               where_the_message_came_from {
-              childImageSharp {
-                fixed(width:150, height: 50){
-                  ...GatsbyImageSharpFixed
-                }
-              }
+              url
+              alternativeText
             }
           }
         }
@@ -124,8 +121,8 @@ class CommentSlider extends React.Component{
                         style={{
                           display: `${comment.node.where_the_message_came_from === null ? 'none' : 'inline-block'}`
                         }}
-                        src={comment.node.where_the_message_came_from !== null ? comment.node.where_the_message_came_from.childImageSharp.fixed.src : " "}
-                        alt="" />
+                        src={comment.node.where_the_message_came_from[0] !== undefined ? comment.node.where_the_message_came_from[0].url : " "}
+                        alt={comment.node.where_the_message_came_from[0] !== undefined ? comment.node.where_the_message_came_from[0].alternativeText : " "} />
                     </SwiperSlide>
                   )
 

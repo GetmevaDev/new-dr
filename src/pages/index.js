@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => {
     return(
         <Layout>
 
-            <SEO title={"Dr. Diana Gerov, DDS"} />
+            <SEO seo={data.seo.SEO} />
             <SectionHeader />
             <SectionConditions />
             <Description />
@@ -54,18 +54,24 @@ export default IndexPage
 export const BgIndexAppointment = graphql`
   query BgIndexAppointment{
      backgroundAppointment: allStrapiHomepageElements {
-    edges {
-      node {
-        BackgroundSectionAppointment {
-          childImageSharp {
-            fluid(maxWidth:1500, maxHeight: 950){
-                  ...GatsbyImageSharpFluid
-             }
+          edges {
+            node {
+              BackgroundSectionAppointment {
+                childImageSharp {
+                  fluid(maxWidth:1500, maxHeight: 950){
+                        ...GatsbyImageSharpFluid
+                   }
+                }
+              }
+            }
           }
         }
+      seo: strapiHomepageElements {
+          SEO{
+              Description
+              Image_Url
+              Title
+          }
       }
-    }
-  }
-
   }
 `

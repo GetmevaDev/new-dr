@@ -29,11 +29,8 @@ const FooterContact = () =>(
     edges {
       node {
         AdaptiveLogo {
-          childImageSharp {
-            fixed(width:180){
-              ...GatsbyImageSharpFixed
-            }
-          }
+          url
+          alternativeText
         }
       }
     }
@@ -48,10 +45,11 @@ const FooterContact = () =>(
           <Link
             to={`/`}
           >
-            <Img
-              className="logo-link"
-              fixed={data.logoFooter.edges[0].node.AdaptiveLogo.childImageSharp.fixed}
-            />
+            {/*<Img*/}
+            {/*  className="logo-link"*/}
+            {/*  fixed={data.logoFooter.edges[0].node.AdaptiveLogo[0].url}*/}
+            {/*/>*/}
+            <img className="logo-link" src={data.logoFooter.edges[0].node.AdaptiveLogo[0].url} alt={data.logoFooter.edges[0].node.AdaptiveLogo[0].alternativeText} />
           </Link>
           {/*<a href="#" className="logo-link"><img src="/assets/img/adaptive_logo.png" alt=""></a>*/}
           <div className="footer-copyright">©Copyright 2020. All rights reserved</div>

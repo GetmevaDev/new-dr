@@ -11,10 +11,10 @@ const titleSectionHeader = data.strapiArticles.title || null;
 const contentArticle = data.strapiArticles.content || null;
 const articleData = data.strapiArticles.Data || null
 
-  console.log(data)
+
   return(
     <Layout>
-      <SEO title={titleSectionHeader} />
+      <SEO seo={data.strapiArticles.SEO_Article} />
       <SectionHeaderArticle
       background={bgSectionHeaderArticle}
       title={titleSectionHeader}
@@ -34,6 +34,11 @@ export const articlesQuery = graphql`
         title
         content
         Data
+          SEO_Article {
+              Title
+              Image_Url
+              Description
+          }
             Background {
       childImageSharp {
          fixed(width:2500){

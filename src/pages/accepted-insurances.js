@@ -17,6 +17,11 @@ const AcceptedInsurances = () => {
         allStrapiAcceptedInsurances {
           edges {
             node {
+                SEO_Accepted_Insurances {
+                    Description
+                    Image_Url
+                    Title
+                }
               SectionAppointment {
                 childImageSharp {
                   fluid(maxWidth:2000, maxHeight: 1000){
@@ -35,7 +40,7 @@ const AcceptedInsurances = () => {
 
   return(
     <Layout>
-      <SEO title="Accepted Insurances" />
+      <SEO seo={data.allStrapiAcceptedInsurances.edges[0].node.SEO_Accepted_Insurances} />
       <SectionHeaderAcceptedInsurances />
       <SectionInsurances />
       <SectionAppointment

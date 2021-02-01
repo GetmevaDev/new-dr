@@ -19,11 +19,8 @@ const AboutOurPractice = () =>{
               About_Our_Practice {
                 Text
                 Photo {
-                  childImageSharp {
-                    fixed(width: 800, height: 400){
-                      ...GatsbyImageSharpFixed
-                    }
-                  }
+                    alternativeText
+                    url
                 }
               }
             }
@@ -44,10 +41,10 @@ const AboutOurPractice = () =>{
 
         </div>
         <div className="block-img">
-          <Img
-            fixed={data.allStrapiAboutUs.edges[0].node.About_Our_Practice.Photo.childImageSharp.fixed}
-          />
-          {/*<img src="/assets/img/20180815_124031-1-1.jpg" alt="">*/}
+          {/*<Img*/}
+          {/*  fixed={data.allStrapiAboutUs.edges[0].node.About_Our_Practice.Photo.childImageSharp.fixed}*/}
+          {/*/>*/}
+          <img src={data.allStrapiAboutUs.edges[0].node.About_Our_Practice.Photo[0].url} alt={data.allStrapiAboutUs.edges[0].node.About_Our_Practice.Photo[0].alternativeText} />
         </div>
       </div>
     </section>

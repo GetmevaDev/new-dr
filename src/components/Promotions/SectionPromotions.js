@@ -14,11 +14,8 @@ const SectionPromotions = () =>{
               Content
               SwitchAppointment
               Image {
-                childImageSharp {
-                  fixed(width: 1000){
-                    ...GatsbyImageSharpFixed
-                  }
-                }
+                  url
+                  alternativeText
               }
             }
           }
@@ -35,7 +32,8 @@ const SectionPromotions = () =>{
           const title = elem.node.Title || null;
           const content = elem.node.Content || null;
           const switchAppointment = elem.node.SwitchAppointment || null;
-          const img = elem.node.Image.childImageSharp.fixed.src || null;
+          const img = elem.node.Image[0].url || null;
+          const alt = elem.node.Image[0].alternativeText || null;
 
           return(
             <section className="section-padding row aligan-items">
@@ -47,7 +45,7 @@ const SectionPromotions = () =>{
                 />) : ""}
               </div>
               <div className="container-img">
-                <img src={img} alt=""/>
+                <img src={img} alt={alt} />
               </div>
             </section>
           )
