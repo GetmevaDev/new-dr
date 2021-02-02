@@ -76,7 +76,7 @@ const ContactNavbar = () => {
                   <span className="icon fa fa-map-marker"></span>
                   {data.contact.edges[0].node.Location.Text}
                 </Link>
-                <Link to="#">
+                <Link to={`/contact-us`}>
                   <span className="icon fa fa-history"></span>
 
                   Working hours
