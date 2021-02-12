@@ -1111,11 +1111,11 @@ position: relative;
 
     a {
       color: $default-color;
-      transition: .3;
+      transition: .3s;
 
       &:hover {
         opacity: .7;
-        transition: .3;
+        transition: .3s;
 
       }
     }

@@ -40,7 +40,7 @@ const SectionReason = () => (
               className="card-reason"
             key={item.id}
             >
-              <img src={item.Image[0].url} alt={item.Image[0].alternativeText} />
+              <img className={`lazyload`} data-src={item.Image[0].url} alt={item.Image[0].alternativeText} />
                     {/*<Img*/}
                     {/*className={`reason_img`}*/}
                     {/*  fixed={item.Image.childImageSharp.fixed}*/}

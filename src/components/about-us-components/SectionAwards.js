@@ -67,7 +67,11 @@ const SectionAwards = () =>{
                 {/*<Img*/}
                 {/*  fixed={elem.image.childImageSharp.fixed}*/}
                 {/*/>*/}
-                <img src={elem.image[0].url} alt={elem.image[0].alternativeText} />
+                <img
+                  className={`lazyload`}
+                  data-src={elem.image[0].url}
+                  alt={elem.image[0].alternativeText}
+                />
                 <h3 className="awards_title">{elem.Name}</h3>
               </SwiperSlide>
             ))

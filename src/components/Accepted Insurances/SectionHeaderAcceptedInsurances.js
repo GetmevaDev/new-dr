@@ -37,7 +37,11 @@ const SectionHeaderAcceptedInsurances = () =>{
           <h2>{title}</h2>
         </div>
         <div className="portrait-dr w900">
-          <img src={image} alt={alt} />
+          <img
+            className={`lazyload`}
+            data-src={image}
+            alt={alt}
+          />
         </div>
       </div>
     </section>

@@ -52,8 +52,6 @@ const SectionFollowUs = () =>{
                 )
               })
             }
-
-            {/*<li><a href="#"><span className="fa fa-instagram"></span></a></li>*/}
           </ul>
         </div>
       </div>

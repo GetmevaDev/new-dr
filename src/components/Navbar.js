@@ -54,7 +54,11 @@ const Navbar = () => {
                       {/*<Img*/}
                       {/*  fluid={data.logo.edges[0].node.AdaptiveLogo.childImageSharp.fluid}*/}
                       {/*/>*/}
-                      <img  src={data.logo.edges[0].node.AdaptiveLogo[0].url} alt={data.logo.edges[0].node.AdaptiveLogo[0].alternativeText} />
+                      <img
+                        className={`lazyload`}
+                        data-src={data.logo.edges[0].node.AdaptiveLogo[0].url}
+                        alt={data.logo.edges[0].node.AdaptiveLogo[0].alternativeText}
+                      />
                     </Link>
                   </li>
                   {

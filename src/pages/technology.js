@@ -71,7 +71,7 @@ function SectionAdvantage(prop){
                       <Link to={`${section.node.Link.Link}`} className="learn_more">{section.node.Link.TextLink}</Link>)}
                   </div>
                   <div className="container-img">
-                    <img src={img} alt={alt} />
+                    <img className={`lazyload`} data-src={img} alt={alt} />
 
                   </div>
                 </section>

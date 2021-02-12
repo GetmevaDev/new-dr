@@ -26,10 +26,8 @@ const TeamDr = ({ data }) => {
             />
           </div>
           <div className="portrait-dr new_width_dds">
-            <img src={photo} alt={alt} />
-            {/*<Img*/}
-            {/*  fixed={image}*/}
-            {/*/>*/}
+            <img className={`lazyload`} data-src={photo} alt={alt} />
+
           </div>
         </div>
       </section>

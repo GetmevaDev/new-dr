@@ -60,10 +60,11 @@ const SectionMeetOurTeam = () =>{
                 className={`card-dr`}
               >
                 <div className="img_team">
-                  <img src={elem.Photo[0].url} alt={elem.Photo[0].alternativeText} />
-                  {/*<Img*/}
-                  {/*  fixed={elem.Photo.childImageSharp.fixed}*/}
-                  {/*/>*/}
+                  <img
+                    className={`lazyload`}
+                    data-src={elem.Photo[0].url}
+                    alt={elem.Photo[0].alternativeText}
+                  />
                 </div>
                 <h3>{elem.Name}</h3>
                 <h4>{elem.Specialization}</h4>

@@ -41,10 +41,11 @@ const AboutOurPractice = () =>{
 
         </div>
         <div className="block-img">
-          {/*<Img*/}
-          {/*  fixed={data.allStrapiAboutUs.edges[0].node.About_Our_Practice.Photo.childImageSharp.fixed}*/}
-          {/*/>*/}
-          <img src={data.allStrapiAboutUs.edges[0].node.About_Our_Practice.Photo[0].url} alt={data.allStrapiAboutUs.edges[0].node.About_Our_Practice.Photo[0].alternativeText} />
+          <img
+            className={`lazyload`}
+            data-src={data.allStrapiAboutUs.edges[0].node.About_Our_Practice.Photo[0].url}
+            alt={data.allStrapiAboutUs.edges[0].node.About_Our_Practice.Photo[0].alternativeText}
+          />
         </div>
       </div>
     </section>

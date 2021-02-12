@@ -43,7 +43,10 @@ function SectionAdvantageIndex(){
             {/*<Img*/}
             {/*  fluid={data.allStrapiAdvantages.edges[0].node.Image.childImageSharp.fluid}*/}
             {/*/>*/}
-            <img src={data.allStrapiAdvantages.edges[0].node.Image[0].url} alt={data.allStrapiAdvantages.edges[0].node.Image[0].alternativeText} />
+            <img
+              className={`lazyload`}
+              data-src={data.allStrapiAdvantages.edges[0].node.Image[0].url}
+              alt={data.allStrapiAdvantages.edges[0].node.Image[0].alternativeText} />
           </div>
         </section>
 

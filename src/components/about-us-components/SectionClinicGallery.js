@@ -60,17 +60,13 @@ componentDidMount() {
             <div className="swiper-wrapper">
               {
                 data.allStrapiAboutUs.edges[0].node.ClinicGallery.map(elem =>(
-
-
                     <div className={`swiper-slide card-gallery`}>
                       <img
-                        src={elem.Photo[0].url}
+                        className={`lazyload`}
+                        data-src={elem.Photo[0].url}
                         alt={elem.Photo[0].alternativeText}
                       />
                     </div>
-
-
-
                 ))
               }
             </div>

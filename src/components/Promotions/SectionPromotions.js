@@ -45,7 +45,7 @@ const SectionPromotions = () =>{
                 />) : ""}
               </div>
               <div className="container-img">
-                <img src={img} alt={alt} />
+                <img className={`lazyload`} data-src={img} alt={alt} />
               </div>
             </section>
           )

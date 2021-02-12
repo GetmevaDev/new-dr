@@ -116,13 +116,17 @@ class CommentSlider extends React.Component{
                       >Read More</button>) : " "}
 
                       <h3 className="name_user">{comment.node.Name}</h3>
-
-                      <img
-                        style={{
-                          display: `${comment.node.where_the_message_came_from === null ? 'none' : 'inline-block'}`
-                        }}
-                        src={comment.node.where_the_message_came_from[0] !== undefined ? comment.node.where_the_message_came_from[0].url : " "}
-                        alt={comment.node.where_the_message_came_from[0] !== undefined ? comment.node.where_the_message_came_from[0].alternativeText : " "} />
+                      {
+                        comment.node.where_the_message_came_from[0] !== undefined ? (
+                          <img
+                            style={{
+                              display: `${comment.node.where_the_message_came_from === null ? 'none' : 'inline-block'}`
+                            }}
+                            className={`lazyload`}
+                            data-src={ comment.node.where_the_message_came_from[0].url}
+                            alt={comment.node.where_the_message_came_from[0].alternativeText} />
+                        ) : null
+                      }
                     </SwiperSlide>
                   )
 

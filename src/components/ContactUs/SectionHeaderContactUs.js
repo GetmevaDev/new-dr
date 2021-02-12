@@ -37,7 +37,7 @@ const SectionHeaderContactUs = () => {
           <h2>{title}</h2>
         </div>
         <div className="portrait-dr">
-          <img src={img} alt="" />
+          <img className={`lazyload`} data-src={img} alt={alt} />
         </div>
       </div>
     </section>

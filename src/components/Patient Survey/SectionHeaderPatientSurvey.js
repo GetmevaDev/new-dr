@@ -34,9 +34,6 @@ const SectionHeaderPatientSurvey = () =>{
       className="section-photo"
       fluid={bgPhoto}
     >
-      {/*<section*/}
-      {/*  style="background: url('/assets/img/20180815_124524-1-1.jpg') no-repeat; background-size: cover; background-position-y: -24px; background-position-x: center;"*/}
-      {/*  className="section-photo">*/}
         <div className="container row">
           <h2>{title}</h2>
         </div>
