@@ -1,4 +1,4 @@
-import React, { Suspense, lazy  } from "react"
+import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import { Helmet } from "react-helmet"
 
@@ -15,14 +15,14 @@ import SectionReason from "../components/SectionReason"
 import SectionAppointment from "../components/SectionAppointment"
 import SectionOurServices from "../components/SectionOurServices"
 import Form from "../components/CommentsForm"
-// import Map from "../components/Map"
-const Map = React.lazy(() => import('../components/Map'));
+import Map from "../components/Map"
+
 import "../scss/main.scss"
 
 
 const IndexPage = ({ data }) => {
 
-
+  const isSSR = typeof window === "undefined"
     return(
         <Layout>
 
@@ -42,9 +42,9 @@ const IndexPage = ({ data }) => {
             />
           <SectionOurServices />
             <Form />
-          <Suspense fallback = {<div> Loading map ... </div>}>
+
             <Map />
-          </Suspense>
+
 
         </Layout>
       )

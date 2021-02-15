@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@feizheng/react-smart-photo": "^1.0.0",
+    "@loadable/component": "^5.14.1",
     "accordion-js": "^2.8.0",
     "gatsby": "^2.24.63",
     "gatsby-awesome-pagination": "^0.3.6",
