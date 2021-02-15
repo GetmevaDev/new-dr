@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Suspense, lazy  } from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import { Helmet } from "react-helmet"
 
@@ -15,8 +15,8 @@ import SectionReason from "../components/SectionReason"
 import SectionAppointment from "../components/SectionAppointment"
 import SectionOurServices from "../components/SectionOurServices"
 import Form from "../components/CommentsForm"
-import Map from "../components/Map"
-
+// import Map from "../components/Map"
+const Map = React.lazy(() => import('../components/Map'));
 import "../scss/main.scss"
 
 
@@ -41,10 +41,11 @@ const IndexPage = ({ data }) => {
               classElem={`appointment`}
             />
           <SectionOurServices />
-            {/* section-services   доделать при создании шаблона*/}
             <Form />
-            {/*очистить форму при нажатии на submit*/}
+          <Suspense fallback = {<div> Loading map ... </div>}>
             <Map />
+          </Suspense>
+
         </Layout>
       )
 
