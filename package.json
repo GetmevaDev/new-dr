@@ -39,6 +39,7 @@
     "react-dom": "^16.12.0",
     "react-fullscreen-image": "0.0.3",
     "react-helmet": "^6.1.0",
+    "react-lazyload": "^3.2.0",
     "react-lightbox-component": "^1.2.1",
     "react-markdown": "^4.3.1",
     "react-paginate": "^6.5.0",

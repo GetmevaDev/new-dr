@@ -1,10 +1,8 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import { Helmet } from "react-helmet"
-
-
 import Layout from "../components/layout"
-import Image from "../components/image"
+import LazyLoad from 'react-lazyload';
 import SEO from "../components/seo"
 import SectionHeader from "../components/SectionHeader"
 import SectionConditions from "../components/SectionConditions"
@@ -42,9 +40,9 @@ const IndexPage = ({ data }) => {
             />
           <SectionOurServices />
             <Form />
-
+          <LazyLoad>
             <Map />
-
+          </LazyLoad>
 
         </Layout>
       )
