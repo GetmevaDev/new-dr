@@ -19,20 +19,22 @@ import "../scss/main.scss"
 
 
 const IndexPage = ({ data }) => {
-
-  const isSSR = typeof window === "undefined"
     return(
         <Layout>
 
             <SEO seo={data.seo.SEO} />
             <SectionHeader />
+          <LazyLoad>
             <SectionConditions />
+          </LazyLoad>
+          <LazyLoad>
             <Description />
+          </LazyLoad>
+          <LazyLoad>
             <SectionAdvantageIndex />
+          </LazyLoad>
             <CommentSlider />
-
             <SectionReason />
-
             <SectionAppointment
               classSection={`section-appointment`}
               background={data.backgroundAppointment.edges[0].node.BackgroundSectionAppointment.childImageSharp.fluid || null}
