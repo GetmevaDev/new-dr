@@ -94,17 +94,12 @@ class CommentSlider extends React.Component{
 
                       key={comment.node.id}
                       className="card_comment">
-
                       <div className="rating">
-
                         {
                           Array.from(Array(comment.node.rating), (item, i) => {
                             return (<span key={i}>★</span>)
                           })
-
                         }
-
-
                       </div>
 
                       <p style={heightParagraph} className={` paragraph ${this.state.i === i ? "open_comment" : " "}`}>{comment.node.Comment}</p>
