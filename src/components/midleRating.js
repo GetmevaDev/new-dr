@@ -72,13 +72,18 @@ const MiddleRating = ()=>{
 
   return(
     <>
-    <div className="rating_text">Rating {middleRating}/5 ({users.allStrapiComments.edges.length} reviews)</div>
+    <div className="rating_text">Rating 5/5 ({users.allStrapiComments.edges.length} reviews)</div>
   <div className="rating-footer">
-    {
-      Array.from(Array(middleRating), (ietm, i) => {
-        return (<span key={i}>★</span>)
-      })
-    }
+    <span >★</span>
+    <span >★</span>
+    <span >★</span>
+    <span >★</span>
+    <span >★</span>
+    {/*{*/}
+    {/*  Array.from(Array(middleRating), (ietm, i) => {*/}
+    {/*    return (<span key={i}>★</span>)*/}
+    {/*  })*/}
+    {/*}*/}
   </div>
 </>
   )
