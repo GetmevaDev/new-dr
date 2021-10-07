@@ -21,7 +21,9 @@ import "../scss/main.scss"
 const IndexPage = ({ data }) => {
     return(
         <Layout>
-
+          {
+            console.log(data?.backgroundAppointment)
+            }
             <SEO seo={data.seo.SEO} />
             <SectionHeader />
           <LazyLoad>

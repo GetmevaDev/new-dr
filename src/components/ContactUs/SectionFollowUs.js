@@ -1,15 +1,11 @@
 import React from "react"
-import {graphql, useStaticQuery} from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import SocialMedia from "../SocialMedia"
 
-
-
-const SectionFollowUs = () =>{
-
-
+const SectionFollowUs = () => {
   const data = useStaticQuery(graphql`
-    query SectionFollowUsQuery{
-    pageQuery: allStrapiContactUs {
+    query SectionFollowUsQuery {
+      pageQuery: allStrapiContactUs {
         edges {
           node {
             Text
@@ -17,23 +13,22 @@ const SectionFollowUs = () =>{
         }
       }
       contact: allStrapiContacts {
-          edges {
-            node {
-              SocialMedia {
-                NameSocialMedia
-                Link
-                id
-              }
+        edges {
+          node {
+            SocialMedia {
+              NameSocialMedia
+              Link
+              id
             }
           }
         }
+      }
     }
   `)
 
-  const text = data.pageQuery.edges[0].node.Text || null;
+  const text = data.pageQuery.edges[0].node.Text || null
 
-
-  return(
+  return (
     <section className="section">
       <div className="container">
         <div className="block-text">
@@ -41,23 +36,23 @@ const SectionFollowUs = () =>{
           <h3>Follow Us</h3>
 
           <ul className="row">
+            {data.contact.edges[0].node.SocialMedia.map((item, index) => {
+              const name = item.NameSocialMedia || null
+              const link = item.Link || null
 
-            {
-              data.contact.edges[0].node.SocialMedia.map(item =>{
-                const name = item.NameSocialMedia || null;
-                const link = item.Link || null;
-
-                return(
-                  <li><a href={link}><span className={`fa fa-${name}`}></span></a></li>
-                )
-              })
-            }
+              return (
+                <li key={index}>
+                  <a href={link}>
+                    <span className={`fa fa-${name}`}></span>
+                  </a>
+                </li>
+              )
+            })}
           </ul>
         </div>
       </div>
     </section>
   )
 }
-
 
 export default SectionFollowUs

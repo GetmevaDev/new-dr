@@ -12,37 +12,30 @@ import Map from "../components/Map"
 import "../scss/main.scss"
 import SEO from "../components/seo"
 
-
-
 const Testimonials = () => {
-
-
-
   const data = useStaticQuery(graphql`
-    query BackgroundSectionAppointmentTestimonialQuery{
-        allStrapiTestimonials {
+    query BackgroundSectionAppointmentTestimonialQuery {
+      allStrapiTestimonials {
         edges {
           node {
-              SEO_Testimonials {
-                  Title
-                  Image_Url
-                  Description
-              }
+            SEO_Testimonials {
+              Title
+              Image_Url
+              Description
+            }
             BackgroundAppointmentSection {
-              childImageSharp {
-                fluid(maxWidth:2000, maxHeight: 300){
-                  ...GatsbyImageSharpFluid
-                }
-              }
+              url
             }
           }
         }
       }
     }
   `)
-  const backgroundSectionAppointmentTestimonial = data.allStrapiTestimonials.edges[0].node.BackgroundAppointmentSection.childImageSharp.fluid || ""
+  const backgroundSectionAppointmentTestimonial =
+    data.allStrapiTestimonials.edges[0].node.BackgroundAppointmentSection[0]
+      .url || ""
 
-  return(
+  return (
     <Layout>
       <SEO seo={data.allStrapiTestimonials.edges[0].node.SEO_Testimonials} />
       <SectionHeaderTestimonial />
@@ -50,7 +43,7 @@ const Testimonials = () => {
       <CommentSlider
         stylesSection={{
           marginTop: "0px",
-          boxShadow: "none"
+          boxShadow: "none",
         }}
       />
       <SectionVideoComment />

@@ -27,7 +27,7 @@ const MakeAnAppointment = (props) => (
            <a
              key={item.node.id || null}
              className={props.classItem}
-             href={`${item.node.Link_Make_An_Appointment || null}`}>
+             href={`${item.node?.Link_Make_An_Appointment || null}`}>
              Make An Appointment
            </a>
 

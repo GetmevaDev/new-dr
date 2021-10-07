@@ -1,9 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
 
 import SectionHeaderAboutUs from "../components/about-us-components/SectionHeaderAboutUs"
 import AboutOurPractice from "../components/about-us-components/SectionAboutOurPractice"
@@ -14,46 +13,42 @@ import SectionClinicGallery from "../components/about-us-components/SectionClini
 import Map from "../components/Map"
 import "../scss/main.scss"
 
-
 const AboutUs = () => {
-
   const data = useStaticQuery(graphql`
-  query BackgroundAppointmentAboutUsQuery{
-    allStrapiAboutUs {
-    edges {
-      node {
-        id
-        SectionWithAppointment {
-          id
-          childImageSharp {
-            fluid(maxWidth:2000, maxHeight: 300){
-              ...GatsbyImageSharpFluid
+    query BackgroundAppointmentAboutUsQuery {
+      allStrapiAboutUs {
+        edges {
+          node {
+            id
+            SectionWithAppointment {
+              id
+              url
             }
           }
         }
       }
-    }
-  }
-      seo:  strapiAboutUs {
-          SEO_About_Us {
-              Description
-              Image_Url
-              Title
-          }
+      seo: strapiAboutUs {
+        SEO_About_Us {
+          Description
+          Image_Url
+          Title
+        }
       }
-  }
+    }
   `)
 
-  return(
+  return (
     <Layout>
-      <SEO seo={data.seo.SEO_About_Us} />
+      <SEO seo={data.seo?.SEO_About_Us} />
       <SectionHeaderAboutUs />
       <AboutOurPractice />
       <SectionAwards />
       <SectionMeetOurTeam />
       <SectionAppointment
         classSection={`section-aboutUs_appointment`}
-        background={data.allStrapiAboutUs.edges[0].node.SectionWithAppointment.childImageSharp.fluid}
+        background={
+          data.allStrapiAboutUs?.edges[0]?.node?.SectionWithAppointment[0].url
+        }
         classElem={`aboutUs_appointment`}
       />
       <SectionClinicGallery />

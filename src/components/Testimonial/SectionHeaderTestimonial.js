@@ -1,17 +1,16 @@
 import React from "react"
-import {graphql, useStaticQuery} from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-const SectionHeaderTestimonial = ()=>{
-
+const SectionHeaderTestimonial = () => {
   const data = useStaticQuery(graphql`
-    query TestimonialPageQuery{
+    query TestimonialPageQuery {
       allStrapiTestimonials {
         edges {
           node {
             Photo {
-                url
-                alternativeText
+              url
+              alternativeText
             }
           }
         }
@@ -19,10 +18,10 @@ const SectionHeaderTestimonial = ()=>{
     }
   `)
 
-  const image = data.allStrapiTestimonials.edges[0].node.Photo[0].url || "";
+  const image = data.allStrapiTestimonials.edges[0].node.Photo[0].url || ""
   const alt = data.allStrapiTestimonials.edges[0].node.Photo[0].alternativeText
 
-  return(
+  return (
     <section className="section-testimonial">
       <div className="container row">
         <div className="heading-pages">
@@ -39,8 +38,5 @@ const SectionHeaderTestimonial = ()=>{
     </section>
   )
 }
-
-
-
 
 export default SectionHeaderTestimonial

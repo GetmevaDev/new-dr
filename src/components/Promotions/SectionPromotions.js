@@ -1,62 +1,55 @@
 import React from "react"
-import {graphql, useStaticQuery} from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import MakeAnAppointment from "../MakeAnAppointment"
 import SectionAdvantage from "../../pages/technology"
 
-const SectionPromotions = () =>{
-
+const SectionPromotions = () => {
   const data = useStaticQuery(graphql`
-    query SectionPromotionsQuery{
-        allStrapiPromotions {
-          edges {
-            node {
-              Title
-              Content
-              SwitchAppointment
-              Image {
-                  url
-                  alternativeText
-              }
+    query SectionPromotionsQuery {
+      allStrapiPromotions {
+        edges {
+          node {
+            Title
+            Content
+            SwitchAppointment
+            Image {
+              url
+              alternativeText
             }
           }
         }
+      }
     }
   `)
 
-  return(
+  return (
     <div className="container">
+      {data.allStrapiPromotions.edges.map((elem, index) => {
+        const title = elem.node.Title || null
+        const content = elem.node.Content || null
+        const switchAppointment = elem.node.SwitchAppointment || null
+        const img = elem.node.Image[0].url || null
+        const alt = elem.node.Image[0].alternativeText || null
 
-      {
-        data.allStrapiPromotions.edges.map(elem => {
-
-          const title = elem.node.Title || null;
-          const content = elem.node.Content || null;
-          const switchAppointment = elem.node.SwitchAppointment || null;
-          const img = elem.node.Image[0].url || null;
-          const alt = elem.node.Image[0].alternativeText || null;
-
-          return(
-            <section className="section-padding row aligan-items">
-              <div className="text-container">
-                <h3 className="heading_title">{title}</h3>
-                <p>{content}</p>
-                {switchAppointment ? (<MakeAnAppointment
+        return (
+          <section className="section-padding row aligan-items" key={index}>
+            <div className="text-container">
+              <h3 className="heading_title">{title}</h3>
+              <p>{content}</p>
+              {switchAppointment ? (
+                <MakeAnAppointment
                   classItem={`appointment width-appointment-button`}
-                />) : ""}
-              </div>
-              <div className="container-img">
-                <img className={`lazyload`} data-src={img} alt={alt} />
-              </div>
-            </section>
-          )
-        })
-      }
-
-
-
-
-
-
+                />
+              ) : (
+                ""
+              )}
+            </div>
+            <div className="container-img">
+              <img className={`lazyload`} data-src={img} alt={alt} />
+            </div>
+          </section>
+        )
+      })}
 
       {/*<section className="section-padding row aligan-items">*/}
       {/*  <div className="text-container">*/}
@@ -102,7 +95,5 @@ const SectionPromotions = () =>{
     </div>
   )
 }
-
-
 
 export default SectionPromotions

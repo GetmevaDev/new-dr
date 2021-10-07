@@ -25,6 +25,7 @@ const Image = () => {
       }
     }
   `)
+  console.log(data.childImageSharp)
 
   if (!data?.placeholderImage?.childImageSharp?.fluid) {
     return <div>Picture not found</div>
