@@ -24,11 +24,16 @@ const SectionHeaderPatientSurvey = () => {
     data.allStrapiPatientSurvey.edges[0].node.BackgroundSection[0].url || ""
   const title = data.allStrapiPatientSurvey.edges[0].node.Title || null
   return (
-    <BackgroundImage Tag="section" className="section-photo" fluid={bgPhoto}>
+    // <BackgroundImage Tag="section" className="section-photo" fluid={bgPhoto}>
+    <section className={`section-photo`} style={{
+      background: `url(${bgPhoto})`,
+    }}>
       <div className="container row">
         <h2>{title}</h2>
       </div>
-    </BackgroundImage>
+    </section>
+
+    // </BackgroundImage>
   )
 }
 

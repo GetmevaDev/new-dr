@@ -39,7 +39,7 @@ const IndexPage = ({ data }) => {
             <SectionReason />
             <SectionAppointment
               classSection={`section-appointment`}
-              background={data.backgroundAppointment.edges[0].node.BackgroundSectionAppointment.childImageSharp.fluid || null}
+              background={data.backgroundAppointment.edges[0].node.BackgroundSectionAppointment[0].url || null}
               classElem={`appointment`}
             />
           <SectionOurServices />
@@ -60,11 +60,7 @@ export const BgIndexAppointment = graphql`
           edges {
             node {
               BackgroundSectionAppointment {
-                childImageSharp {
-                  fluid(maxWidth:1500, maxHeight: 950){
-                        ...GatsbyImageSharpFluid
-                   }
-                }
+               url
               }
             }
           }
