@@ -27,6 +27,7 @@ const SectionHeaderPatientSurvey = () => {
     // <BackgroundImage Tag="section" className="section-photo" fluid={bgPhoto}>
     <section className={`section-photo`} style={{
       background: `url(${bgPhoto})`,
+      backgroundSize: 'cover',
     }}>
       <div className="container row">
         <h2>{title}</h2>
