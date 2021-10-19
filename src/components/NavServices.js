@@ -60,7 +60,7 @@ const NavServices = () => {
 
     <li className="containers_sub-menu padding order_8 row">
       <div className="container_sub-menu">
-        <h3 className="heading_sub-menu">{data.NameCategory.edges[0].node.NmaeCategory || null}</h3>
+        <h3 className="heading_sub-menu">{data?.NameCategory?.edges[0]?.node?.NmaeCategory || null}</h3>
         <ul>
           {
             data.firstBlock.edges.map(item => (
@@ -81,7 +81,7 @@ const NavServices = () => {
         </ul>
       </div>
       <div className="container_sub-menu">
-        <h3 className="heading_sub-menu">{data.NameCategory.edges[1].node.NmaeCategory}</h3>
+        <h3 className="heading_sub-menu">{data?.NameCategory?.edges[1]?.node?.NmaeCategory}</h3>
         <ul>
           {
             data.secondBlock.edges.map(item => (
@@ -97,7 +97,7 @@ const NavServices = () => {
         </ul>
       </div>
       <div className="container_sub-menu">
-        <h3 className="heading_sub-menu">{data.NameCategory.edges[2].node.NmaeCategory}</h3>
+        <h3 className="heading_sub-menu">{data?.NameCategory?.edges[2]?.node?.NmaeCategory}</h3>
         <ul>
           {
             data.thirdBlock.edges.map(item => (
@@ -110,7 +110,7 @@ const NavServices = () => {
         </ul>
       </div>
       <div className="container_sub-menu">
-        <h3 className="heading_sub-menu">{data.NameCategory.edges[3].node.NmaeCategory}</h3>
+        <h3 className="heading_sub-menu">{data?.NameCategory?.edges[3]?.node?.NmaeCategory}</h3>
         <ul>
           {
             data.fourthBlock.edges.map(item => (

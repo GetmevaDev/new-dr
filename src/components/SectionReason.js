@@ -30,7 +30,7 @@ const SectionReason = () => (
     render={data => (
       <section className="section-reason">
         <h2 className="section-title">
-          Why choose <strong>Happy Smiles Dental?</strong>
+          Why choose <strong>IV Stat?</strong>
         </h2>
         <div className="container">
           <p>
