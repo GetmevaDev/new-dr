@@ -19,7 +19,7 @@ const Description = () => (
     }
     `}
     render={data => (
-      <section className="section-proposal">
+      <section className="section-proposal" style={{marginTop: 50}}>
         <div className="container compressed_container">
           {
             <ReactMarkdown
