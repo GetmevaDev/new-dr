@@ -64,11 +64,11 @@ const NavServices = () => {
         <ul>
           {
             data.firstBlock.edges.map(item => (
-              <li key={item.node.id || null}>
+              <li key={item?.node?.id || null}>
                 <a
-                  href={`/services/${item.node.slug}`}
+                  href={`/services/${item?.node?.slug}`}
                   className="link_sub-menu">
-                  {item.node.Title || null}
+                  {item?.node?.Title || null}
                 </a>
               </li>
             ))
@@ -85,7 +85,7 @@ const NavServices = () => {
         <ul>
           {
             data.secondBlock.edges.map(item => (
-              <li key={item.node.id || null}><a href={`/services/${item.node.slug}`} className="link_sub-menu">{item.node.Title}</a></li>
+              <li key={item?.node?.id || null}><a href={`/services/${item?.slug}`} className="link_sub-menu">{item.node.Title}</a></li>
             ))
           }
           {/*<li><a href="#" className="link_sub-menu">Bridges and Dentures</a></li>
@@ -101,7 +101,7 @@ const NavServices = () => {
         <ul>
           {
             data.thirdBlock.edges.map(item => (
-              <li key={item.node.id || null}><a href={`/services/${item.node.slug}`} className="link_sub-menu">{item.node.Title}</a></li>
+              <li key={item?.node?.id || null}><a href={`/services/${item?.node?.slug}`} className="link_sub-menu">{item.node.Title}</a></li>
             ))
           }
           {/*<li><a href="#" className="link_sub-menu">Gum Therapy</a></li>*/}
@@ -114,7 +114,7 @@ const NavServices = () => {
         <ul>
           {
             data.fourthBlock.edges.map(item => (
-              <li key={item.node.id || null}><a href={`/services/${item.node.slug}`} className="link_sub-menu">{item.node.Title}</a></li>
+              <li key={item?.node?.id || null}><a href={`/services/${item?.node?.slug}`} className="link_sub-menu">{item.node.Title}</a></li>
             ))
           }
           {/*<li><a href="#" className="link_sub-menu">Teeth Whitening</a></li>*/}
