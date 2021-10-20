@@ -653,6 +653,7 @@ button.swiper-pagination-bullet {
 .container_sub-menu ul {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
 }
 
 .container_sub-menu ul li {
