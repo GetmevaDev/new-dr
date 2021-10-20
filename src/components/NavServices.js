@@ -21,6 +21,7 @@ const NavServices = () => {
                     services {
                       Title
                       id
+                      slug
                     }
                   }
                 }
@@ -69,7 +70,7 @@ console.log(data?.NameCategory.edges[1].node.services)
               <li key={item?.id || null}>
                 {console.log(item)}
                 <a
-                  href={`/services/${item?.node?.slug}`}
+                  href={`/services/${item?.slug}`}
                   className="link_sub-menu">
                   {item?.Title || null}
                 </a>
@@ -87,7 +88,7 @@ console.log(data?.NameCategory.edges[1].node.services)
               <li key={item?.id || null}>
                 {console.log(item)}
                 <a
-                  href={`/services/${item?.node?.slug}`}
+                  href={`/services/${item?.slug}`}
                   className="link_sub-menu">
                   {item?.Title || null}
                 </a>
@@ -105,7 +106,7 @@ console.log(data?.NameCategory.edges[1].node.services)
               <li key={item?.id || null}>
                 {console.log(item)}
                 <a
-                  href={`/services/${item?.node?.slug}`}
+                  href={`/services/${item?.slug}`}
                   className="link_sub-menu">
                   {item?.Title || null}
                 </a>
@@ -122,7 +123,7 @@ console.log(data?.NameCategory.edges[1].node.services)
               <li key={item?.id || null}>
                 {console.log(item)}
                 <a
-                  href={`/services/${item?.node?.slug}`}
+                  href={`/services/${item?.slug}`}
                   className="link_sub-menu">
                   {item?.Title || null}
                 </a>
