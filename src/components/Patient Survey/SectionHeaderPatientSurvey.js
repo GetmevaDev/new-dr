@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
 const SectionHeaderPatientSurvey = () => {
+  // const [one, setOne] = useState([])
   const data = useStaticQuery(graphql`
     query SectionHeaderPatientSurveyQuery {
       allStrapiPatientSurvey {
@@ -20,8 +21,14 @@ const SectionHeaderPatientSurvey = () => {
 
   console.log(data.allStrapiPatientSurvey.edges)
 
+  // useEffect(() => {
+    
+  //   setOne(data.allStrapiPatientSurvey.edges)
+  // }, [])
+
+
   const bgPhoto =
-    data.allStrapiPatientSurvey.edges[0].node.BackgroundSection[0].url || ""
+    data?.allStrapiPatientSurvey?.edges[0]?.node?.BackgroundSection[0].url || ""
   const title = data.allStrapiPatientSurvey.edges[0].node.Title || null
   return (
     // <BackgroundImage Tag="section" className="section-photo" fluid={bgPhoto}>

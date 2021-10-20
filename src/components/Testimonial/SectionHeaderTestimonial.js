@@ -18,7 +18,7 @@ const SectionHeaderTestimonial = () => {
     }
   `)
 
-  const image = data.allStrapiTestimonials.edges[0].node.Photo[0].url || ""
+  const image = data?.allStrapiTestimonials?.edges[0]?.node?.Photo[0]?.url || ""
   const alt = data.allStrapiTestimonials.edges[0].node.Photo[0].alternativeText
 
   return (
