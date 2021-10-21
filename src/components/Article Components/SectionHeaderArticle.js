@@ -9,7 +9,7 @@ const SectionHeaderArticle = (props) => {
     <section
       className="section-header_pages bg_style"
     style={{
-      background: `#c57916 url(${props.background}) no-repeat center`,
+      background: `#B282FB url(${props.background}) no-repeat center`,
       backgroundSize: 'cover',
 
     }}

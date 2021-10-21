@@ -49,7 +49,7 @@ const ServicesTemplate = ({data}) => {
                       to={`/services/${item.node.slug}`}
                       className="item service-link"
                       activeStyle={{
-                      backgroundColor: '#c57916',
+                      backgroundColor: '#B282FB',
                       marginLeft: '-30px',
                       marginRight: '-30px',
                       borderTopRightRadius: '0',

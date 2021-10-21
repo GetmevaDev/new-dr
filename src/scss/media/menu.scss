@@ -1,65 +1,60 @@
-@import '../utils/mixins.scss';
-@import '../utils/vars.scss';
-@import '../utils/fonts.scss';
-
-
+@import "../utils/mixins.scss";
+@import "../utils/vars.scss";
+@import "../utils/fonts.scss";
 
 @include mediaWidth_1025 {
-  .order_0{
+  .order_0 {
     order: 1 !important;
   }
-  .order_1{
+  .order_1 {
     order: 2 !important;
   }
-  .order_2{
+  .order_2 {
     order: 3 !important;
   }
-  .order_3{
+  .order_3 {
     order: 4 !important;
   }
-  .order_4{
+  .order_4 {
     order: 6 !important;
   }
-  .order_5{
+  .order_5 {
     order: 7 !important;
   }
-  .order_6{
+  .order_6 {
     order: 8 !important;
   }
-  .order_7{
+  .order_7 {
     order: 9 !important;
   }
-  .order_8{
+  .order_8 {
     order: 5 !important;
   }
-  .contact{
+  .contact {
     width: 246px;
     text-align: center;
   }
   .site-header {
-    border-bottom: 2px solid #c57916;
+    border-bottom: 2px solid #b282fb;
   }
 
   .site-header_fixed {
     position: absolute;
-
   }
 
-
-  .logo-link{
+  .logo-link {
     width: 130px !important;
     height: 45px !important;
-    img{
+    img {
       width: 130px !important;
       height: 45px !important;
     }
-    picture{
-      img{
+    picture {
+      img {
         width: 130px !important;
         height: 45px !important;
       }
     }
-
   }
 
   .padding-contact-block {
@@ -100,12 +95,12 @@
       &::before,
       &::after {
         position: relative;
-        content: '';
+        content: "";
         display: block;
         width: 18px;
         height: 2px;
         background: $warning-color;
-        transition: .3s;
+        transition: 0.3s;
       }
 
       &::before {
@@ -126,30 +121,24 @@
     &::before {
       width: 25px;
       transform: translateY(10px) rotate(45deg);
-      transition: .3s;
+      transition: 0.3s;
     }
 
     &::after {
       transform: translateY(-5px) rotate(-45deg);
-      transition: .3s;
+      transition: 0.3s;
     }
   }
-
 
   .adaptive_menu.menu_active {
     transform: translateX(-250px);
     height: 100%;
   }
 
-
-
   .content_active_menu {
     transform: translateX(250px);
-    transition: .3s;
-
+    transition: 0.3s;
   }
-
-
 
   .containers_sub-menu {
     width: 100%;
@@ -175,12 +164,12 @@
   }
 
   .site-header_nav .site-nav_items .nav_item {
-    background: #c57916;
+    background: #b282fb;
   }
 
   .nav_item.hover_pop-up_menu_2:hover .containers_sub-menu {
     height: 450px;
-    transition: height .7s;
+    transition: height 0.7s;
   }
 
   .nav_link:hover,
@@ -200,7 +189,7 @@
     width: 100%;
     text-align: left;
     overflow: hidden;
-    transition: .3s;
+    transition: 0.3s;
     top: -46px;
     left: 0;
     padding: 0 0 0 30px;
@@ -210,7 +199,7 @@
 
   .hover_pop-up_menu:hover .pop-up_items {
     height: auto;
-    transition: .3s;
+    transition: 0.3s;
     padding: 15px 0 15px 30px;
     transform: translateY(44px);
   }
@@ -219,8 +208,6 @@
     display: inline-block;
     margin-left: 6px;
   }
-
-
 
   .adaptive_menu {
     width: 250px;
@@ -231,8 +218,7 @@
     left: 0;
     padding: 0;
     transform: translateX(-100%);
-    transition: .3s;
-
+    transition: 0.3s;
 
     .adaptive_menu_logo {
       max-width: 100%;
@@ -266,13 +252,9 @@
             padding: 0 0 0 30px;
           }
         }
-
       }
     }
-
-
   }
-
 
   .section-footer_contact {
     .row {
@@ -293,8 +275,8 @@
         flex-basis: 300px;
         text-align: center;
         padding: 18px 30px;
-        border-top: 1px solid rgba(255, 255, 255, .22);
-        border-bottom: 1px solid rgba(255, 255, 255, .22);
+        border-top: 1px solid rgba(255, 255, 255, 0.22);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.22);
         flex-grow: 1;
 
         &:last-child {
@@ -303,8 +285,7 @@
 
         &:nth-child(odd) {
           border-left: none;
-          border-right: 1px solid rgba(255, 255, 255, .22);
-
+          border-right: 1px solid rgba(255, 255, 255, 0.22);
         }
       }
     }
@@ -324,7 +305,6 @@
         }
       }
     }
-
   }
 
   .rating_text,
@@ -349,12 +329,9 @@
       flex-basis: 355px;
       text-align: center;
     }
-
   }
-
 
   .footer-appointment {
     display: none !important;
-
   }
 }
