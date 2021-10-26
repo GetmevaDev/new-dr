@@ -69,14 +69,14 @@ const Navbar = () => {
                   >
                     <a href={elem?.Link_Page} className="nav_link">
                       {elem?.Name_Page}
-                      {elem?.Sub_Menu_Item.length > 0 ? (
+                      {elem?.Sub_Menu_Item?.length > 0 ? (
                         <span className="fa fa-angle-down"></span>
                       ) : (
                         " "
                       )}
                     </a>
-                    {elem?.Sub_Menu_Item && elem?.Sub_Menu_Item.length > 0
-                      ? elem?.Sub_Menu_Item.map(nameSubMenu => (
+                    {/* {elem?.Sub_Menu_Item && elem?.Sub_Menu_Item?.length > 0
+                      ? elem?.Sub_Menu_Item?.map(nameSubMenu => (
                           <a
                             key={nameSubMenu?.id}
                             className="pop-up_items"
@@ -85,7 +85,7 @@ const Navbar = () => {
                             {nameSubMenu?.Name_Page}
                           </a>
                         ))
-                      : null}
+                      : null} */}
                   </li>
                 ))}
                 <NavServices />
