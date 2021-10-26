@@ -41,7 +41,6 @@ const SectionHeader = () => (
           <div className="container_heading">
             {data.allStrapiHomepageElements.edges.map(items => (
               <React.Fragment key={items.node.id}>
-                <h2>{items.node.SectionHeader.Sub_Title}</h2>
                 <h2 className="headind_section">
                   <strong>
                     <span className="warning-color">
@@ -53,6 +52,8 @@ const SectionHeader = () => (
                     </span>
                   </strong>
                 </h2>
+                <h2>{items.node.SectionHeader.Sub_Title}</h2>
+
                 <p>{items.node.SectionHeader.Text}</p>
                 <MakeAnAppointment classItem={`appointment`} />
               </React.Fragment>

@@ -816,7 +816,6 @@ button.swiper-pagination-bullet {
 
     li {
       transition: 0.3s;
-
       .nav_link {
         transition: 0.4s;
         @include styleLinkMenu;
@@ -1520,7 +1519,7 @@ button.swiper-pagination-bullet {
 .logo-link {
   display: inline-block;
   max-width: 100%;
-  width: 100px;
+  width: 150px;
 
   img {
     max-width: 100%;
@@ -1533,7 +1532,7 @@ button.swiper-pagination-bullet {
 }
 
 .site-footer {
-  background: #222;
+  background: #343434;
 
   * {
     color: #fff;
