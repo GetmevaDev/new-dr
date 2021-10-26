@@ -1306,6 +1306,7 @@ button.swiper-pagination-bullet {
     justify-content: space-around;
     flex-wrap: wrap;
     padding-top: 100px;
+    align-items: inherit;
   }
 
   p {
@@ -1328,9 +1329,17 @@ button.swiper-pagination-bullet {
       font-weight: 700;
       line-height: 1.2;
       color: #b282fb;
-      margin: 0 0 20px;
+      margin: 0 0 20px 75px;
       text-align: center;
+      width: 200px;
     }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .reason_title {
+    margin: 0 0 20px !important;
+    width: 300px !important;
   }
 }
 
