@@ -7,7 +7,9 @@
   "dependencies": {
     "@feizheng/react-smart-photo": "^1.0.0",
     "@loadable/component": "^5.14.1",
+    "@react-pdf/renderer": "^2.0.20",
     "accordion-js": "^2.8.0",
+    "file-saver": "^2.0.5",
     "gatsby": "^2.24.63",
     "gatsby-awesome-pagination": "^0.3.6",
     "gatsby-background-image": "^1.1.2",
