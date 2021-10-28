@@ -107,7 +107,6 @@ section,
 
 .row {
   display: flex;
-  align-items: center;
   position: relative;
   justify-content: space-between;
 }
@@ -722,6 +721,7 @@ button.swiper-pagination-bullet {
   padding: rem(30) rem(20);
   z-index: 100;
 
+  align-items: center;
   .site-header_contact-block {
     flex-grow: 2;
     z-index: 100;
@@ -731,7 +731,7 @@ button.swiper-pagination-bullet {
     .logo-link,
     .adaptive_menu_logo {
       display: inline-block;
-      width: 110px;
+      width: 175px;
       height: 100%;
 
       img {
@@ -1020,7 +1020,7 @@ button.swiper-pagination-bullet {
 }
 
 .warning-color {
-  color: $warning-color;
+  color: #d3b28e;
 }
 
 .swiper-container {
@@ -1215,7 +1215,7 @@ button.swiper-pagination-bullet {
 
   strong {
     font-weight: 700;
-    color: $warning-color;
+    color: #d3b28e;
   }
 
   &::after {
@@ -1529,7 +1529,6 @@ button.swiper-pagination-bullet {
 .logo-link {
   display: inline-block;
   max-width: 100%;
-  width: 150px;
 
   img {
     max-width: 100%;
