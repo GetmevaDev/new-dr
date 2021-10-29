@@ -2245,6 +2245,7 @@ button.swiper-pagination-bullet {
 
     img {
       max-width: 100%;
+      margin-bottom: rem(1);
     }
 
     h2 {
@@ -2296,6 +2297,7 @@ button.swiper-pagination-bullet {
         }
       }
     }
+
     .title-service {
       display: block;
       @include mediaWidth_992 {
@@ -2404,6 +2406,8 @@ button.swiper-pagination-bullet {
 
     img {
       max-width: 100%;
+      max-height: 735px;
+      margin-bottom: 20px;
     }
 
     h2 {

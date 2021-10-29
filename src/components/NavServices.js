@@ -38,6 +38,11 @@ const NavServices = () => {
             id
             Title
             slug
+            Doctors {
+              Photo {
+                url
+              }
+            }
           }
         }
       }
@@ -97,6 +102,7 @@ const NavServices = () => {
               <a href={`/services/${item?.slug}`} className="link_sub-menu">
                 {item?.Title || null}
               </a>
+              <img src="" alt="" />
             </li>
           ))}
         </ul>
