@@ -78,12 +78,12 @@ const FooterContact = () => (
             <SocialMedia />
             <div className="mt">
               <MiddleRating />
-              <div className="powered">
-                Powered by{" "}
-                <a href="#">
+              <a className="powered">
+                Powered by
+                <a href="https://robertgerov.com/">
                   <img style={{ width: 40 }} src={RGM} />
                 </a>
-              </div>
+              </a>
             </div>
           </div>
         </div>

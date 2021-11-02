@@ -91,7 +91,7 @@ const Navbar = () => {
                 <NavServices />
               </ul>
             </nav>
-            <SocialMedia />
+            {/* <SocialMedia /> */}
           </div>
         </div>
       )}
