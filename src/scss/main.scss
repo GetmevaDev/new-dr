@@ -669,6 +669,7 @@ button.swiper-pagination-bullet {
 }
 
 .border-bottom {
+  border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 .site-header {
@@ -945,6 +946,7 @@ button.swiper-pagination-bullet {
 .section-header {
   background-repeat: no-repeat;
   background-size: cover;
+  margin-top: -20px;
   padding: rem(190) 0;
   position: relative;
   &:before {
@@ -2764,7 +2766,6 @@ button.swiper-pagination-bullet {
 
 .section-contact {
   color: #333;
-  margin-top: rem(-243);
   padding-bottom: 145px;
 
   @include mediaWidth_700 {
