@@ -45,7 +45,10 @@ class SectionClinicGallery extends React.Component {
                   prevEl: ".swiper-button-prev",
                 }}
               >
-                <div className="swiper-wrapper">
+                <div
+                  className="swiper-wrapper"
+                  style={{ transform: "translate3d(280px, 0px, 0px)" }}
+                >
                   {data?.allStrapiAboutUs?.edges[0]?.node?.ClinicGallery.map(
                     (elem, index) => (
                       <div className={`swiper-slide card-gallery`} key={index}>

@@ -8,6 +8,7 @@ import "../scss/main.scss"
 import SEO from "../components/seo"
 import ContactForm from "../components/ContactUs/ContactForm"
 import Form from "../components/CommentsForm"
+import NewForm from "../components/newForm"
 
 const ContactUs = ({ data }) => {
   return (
@@ -15,6 +16,7 @@ const ContactUs = ({ data }) => {
       <SEO seo={data.strapiContactUs.SEO_Contact_Us} />
       <SectionHeaderContactUs />
       <SectionContact />
+      {/* <NewForm /> */}
       <Form />
       <SectionFollowUs />
     </Layout>
