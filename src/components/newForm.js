@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 
 const newForm = () => {
   const arr = [
@@ -19,6 +19,73 @@ const newForm = () => {
     { name: "Blood in urine", id: 15 },
     { name: "Pregnant", id: 16 },
   ]
+
+  // const [firstName, setFirstName] = useState()
+  // const [lastname, setLastname] = useState()
+  // const [wouldyoulike, setWouldYouLike] = useState()
+  // const [howDid, setHoWdid] = useState()
+
+  // const [email, setEmail] = useState("")
+  // const [emailDirty, setEmailDirty] = useState(false)
+  // const [emailError, setEmailError] = useState("Email is a required field")
+  // const [formValid, setFormValid] = useState(false)
+  // const [phone, setPhone] = useState()
+  // const history = useHistory()
+  // const emailHandler = e => {
+  //   setEmail(e.target.value)
+  //   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+  //   if (!re.test(String(e.target.value).toLowerCase())) {
+  //     setEmailError("Incorrect email")
+  //   } else {
+  //     setEmailError("")
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   if (emailError) {
+  //     setFormValid(false)
+  //   } else {
+  //     setFormValid(true)
+  //   }
+  // }, [emailError])
+
+  // function sendEmail(e) {
+  //   e.preventDefault()
+
+  //   emailjs
+  //     .sendForm(
+  //       "service_mw3qmm3",
+  //       "template_4329ukk",
+  //       e.target,
+  //       "user_iw2a3XOS7O7HrGbR8S31M"
+  //     )
+  //     .then(
+  //       result => {
+  //         console.log(result.text)
+  //         setFirstName("")
+  //         setLastname("")
+  //         setPhone("")
+  //         setEmail("")
+  //         setWouldYouLike("")
+  //         setHoWdid("")
+  //         history.push("/thankyou")
+  //       },
+  //       error => {
+  //         console.log(error.text)
+  //       }
+  //     )
+  // }
+
+  // const blurHandler = e => {
+  //   switch (e.target.name) {
+  //     case "email":
+  //       setEmailDirty(true)
+  //       break
+  //     default:
+  //       break
+  //   }
+  // }
 
   return (
     <div>
@@ -43,7 +110,7 @@ const newForm = () => {
           <label className="lastinput">
             <input
               className="newformInput"
-              type="text"
+              type="date"
               placeholder="Date of birth"
             />
           </label>
@@ -62,7 +129,8 @@ const newForm = () => {
             <label>
               <input
                 className="newformInput"
-                type="text"
+                name="email"
+                type="email"
                 placeholder="E-mail"
               />
             </label>
@@ -80,8 +148,9 @@ const newForm = () => {
             <label>
               <input
                 className="newformInput"
-                type="text"
-                placeholder="Phone "
+                name="phone"
+                value=""
+                placeholder="Phone"
               />
             </label>
 

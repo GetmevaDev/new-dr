@@ -7,7 +7,7 @@ import SectionFollowUs from "../components/ContactUs/SectionFollowUs"
 import "../scss/main.scss"
 import SEO from "../components/seo"
 import ContactForm from "../components/ContactUs/ContactForm"
-// import NewForm from "../components/newForm"
+import NewForm from "../components/newForm"
 import CommentsForm from "../components/CommentsForm"
 
 const ContactUs = ({ data }) => {
