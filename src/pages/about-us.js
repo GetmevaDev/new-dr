@@ -42,7 +42,7 @@ const AboutUs = () => {
       <SEO seo={data.seo?.SEO_About_Us} />
       <SectionHeaderAboutUs />
       <AboutOurPractice />
-      <SectionAwards />
+      {/* <SectionAwards /> */}
       <SectionMeetOurTeam />
       <SectionAppointment
         classSection={`section-aboutUs_appointment`}
