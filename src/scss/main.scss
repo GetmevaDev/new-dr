@@ -846,7 +846,7 @@ button.swiper-pagination-bullet {
   position: relative;
   top: -100px;
   width: 100%;
-  padding: 30px;
+  padding: 30px 30px 0 30px;
 }
 
 .lastinput {
@@ -952,11 +952,39 @@ button.swiper-pagination-bullet {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 16px;
+  margin-bottom: 50px;
   cursor: pointer;
   line-height: 25px;
   padding: 9px 40px 10px 40px;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+.newFormIconBlock {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  margin-top: -30px;
+  background: #fbfbfb;
+}
+
+.newFormIcon {
+  content: "";
+  background-image: url("../images/email-i.png");
+  width: 20px;
+  height: 20px;
+  top: 25px;
+  background-size: cover;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.newFormIconBlock p {
+  padding-left: 25px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 30px;
+  color: #363636;
 }
 
 .padding {
@@ -1510,6 +1538,37 @@ button.swiper-pagination-bullet {
   .reason_title {
     margin: 0 0 20px !important;
     width: 300px !important;
+  }
+
+  .topNewForm {
+    flex-direction: column;
+  }
+
+  .topNewForm label + label {
+    padding-left: 0;
+  }
+  .newformInput {
+    padding-left: 0;
+  }
+
+  .formTitle {
+    flex-direction: column;
+  }
+
+  .symptomsMain {
+    flex-direction: column;
+  }
+  .serviceInterestedForm {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .serviceInterestedForm h3 {
+    margin-left: 0;
+  }
+
+  .serviceInterestedForm_inner {
+    margin-left: 0;
   }
 }
 
